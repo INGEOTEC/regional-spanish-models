@@ -15,12 +15,12 @@ _A large scale lexical and semantic analysis of Spanish language variations in T
 ## Models
 |    |    |    |    |    |
 |----|----|----|----|----|
-| [Argentina (AR)](AR.bin)   | [Bolivia (BO)](BO.bin)    | [Brazil (BR)](BR.bin)        | [Canadá (CA)](CA.bin)                   | [Chile (CL)](CL.bin)     |
-| [Colombia (CO)](CO.bin)    | [Costa Rica (CR)](CR.bin) | [Cuba (CU)](CU.bin)          | [República Dominicana (DO)](DO.bin)     | [Ecuador (EC)](EC.bin)   |
-| [España (ES)](ES.bin)      | [Francia (FR)](FR.bin)    | [Great Britain (GB)](GB.bin) | [Guinea Equatorial (GQ)](GQ.bin)        | [Guatemala (GT)](GT.bin) |
-| [Honduras (HN)](HN.bin)    | [México (MX)](MX.bin)     | [Nicaragua (NI)](NI.bin)     | [Panamá (PA)](PA.bin)                   | [Perú (PE)](PE.bin)      |
-| [Puerto Rico (PR)](PR.bin) | [Paraguay (PY)](PY.bin)   | [El Salvador (SV)](SV.bin)   | [United States of America (US)](US.bin) | [Uruguay (UY)](UY.bin)   |
-| [Venezuela (VE)](VE.bin)   |                           |                              |                                         | **LARGE:**   [ALL](ALL.bin) | 
+| [Argentina (AR)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/AR.bin)   | [Bolivia (BO)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/BO.bin)    | [Brazil (BR)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/BR.bin)        | [Canadá (CA)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/CA.bin)                   | [Chile (CL)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/CL.bin)     |
+| [Colombia (CO)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/CO.bin)    | [Costa Rica (CR)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/CR.bin) | [Cuba (CU)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/CU.bin)          | [República Dominicana (DO)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/DO.bin)     | [Ecuador (EC)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/EC.bin)   |
+| [España (ES)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/ES.bin)      | [Francia (FR)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/FR.bin)    | [Great Britain (GB)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/GB.bin) | [Guinea Equatorial (GQ)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/GQ.bin)        | [Guatemala (GT)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/GT.bin) |
+| [Honduras (HN)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/HN.bin)    | [México (MX)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/MX.bin)     | [Nicaragua (NI)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/NI.bin)     | [Panamá (PA)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/PA.bin)                   | [Perú (PE)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/PE.bin)      |
+| [Puerto Rico (PR)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/PR.bin) | [Paraguay (PY)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/PY.bin)   | [El Salvador (SV)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/SV.bin)   | [United States of America (US)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/US.bin) | [Uruguay (UY)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/UY.bin)   |
+| [Venezuela (VE)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/VE.bin)   |                           |                              |                                         | **LARGE:**   [ALL](http://geo.ingeotec.mx/~sadit/regional-spanish-models/ALL.bin) | 
 
 Our _ALL_ model is learned from the entire corpora. 
 
@@ -34,8 +34,8 @@ We used a subset of the [NRC EmoLex's](https://saifmohammad.com/WebPages/NRC-Emo
 
 Here you can find JSON files with the resources:
 
-- [References word list](nrc-normalized-lexicon-with-emotions.json.gz)
-- [Semantic affinity matrix](corpora-emo-affinity-matrix.json.gz)
+- [References word list](http://geo.ingeotec.mx/~sadit/regional-spanish-models/nrc-normalized-lexicon-with-emotions.json.gz)
+- [Semantic affinity matrix](http://geo.ingeotec.mx/~sadit/regional-spanish-models/corpora-emo-affinity-matrix.json.gz)
 
 # Lexical resources
 ![Geographic visualization of the lexical similarity, similar colors imply lexical similarity](fig-region-lex-colors-clustering-umap-3.png)
@@ -44,7 +44,7 @@ The vocabularies of the Twitter Spanish Corpora, as described in the article, ca
 
 ![Lexical affinity matrix](fig-lexheatmap-projection.png)
 
-Here you can find a JSON with the [Lexical affinity matrix](corpora-lex-affinity-matrix.json.gz). You can also find the frequencies of the [emojis](emojis-distribution.json.gz) around our regions of study.
+Here you can find a JSON with the [Lexical affinity matrix](http://geo.ingeotec.mx/~sadit/regional-spanish-models/corpora-lex-affinity-matrix.json.gz). You can also find the frequencies of the [emojis](http://geo.ingeotec.mx/~sadit/regional-spanish-models/emojis-distribution.json.gz) around our regions of study.
 
 
 ## Corpora
