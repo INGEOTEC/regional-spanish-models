@@ -13,6 +13,7 @@ We created 26 word-embedding models with [https://fasttext.cc/](fastText), one p
 _A large scale lexical and semantic analysis of Spanish language variations in Twitter._ Eric S. Tellez, Daniela Moctezuma, Sabino Miranda, and Mario Graff. ARXIV URL.
 
 ## Models
+
 |    |    |    |    |    |
 |----|----|----|----|----|
 | [Argentina (AR)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/AR.bin)   | [Bolivia (BO)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/BO.bin)    | [Brazil (BR)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/BR.bin)        | [Canadá (CA)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/CA.bin)                   | [Chile (CL)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/CL.bin)     |
