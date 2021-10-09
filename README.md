@@ -36,7 +36,7 @@ Here you can find JSON files with the resources:
 # Lexical resources
 ![Geographic visualization of the lexical similarity, similar colors imply lexical similarity](fig-region-lex-colors-clustering-umap-3.png)
 
-The vocabularies of the Twitter Spanish Corpora, as described in the article, can be downloaded from the following JSON file: [vocabularies.json.gz](26 vocabularies)
+The vocabularies of the Twitter Spanish Corpora, as described in the article, can be downloaded from the following JSON file: [26 vocabularies](http://geo.ingeotec.mx/~sadit/regional-spanish-models/vocabularies.json.gz)
 
 ![Lexical affinity matrix](fig-lexheatmap-projection.png)
 
