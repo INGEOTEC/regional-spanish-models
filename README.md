@@ -72,7 +72,7 @@ Here you can find a JSON with the [Lexical affinity matrix](http://geo.ingeotec.
 | Spain              | ES | 1,278K | 121.42M | 1,908.07M |
 | Uruguay            | UY | 157K   | 30.83M  |   351.81M |
 | Venezuela          | VE | 421K   | 35.48M  |   556.12M |
-  | | | | | |
+  | | | | |
  Brazil                   | BR | 1,604K |  27.20M |  142.22M |
  Canada                   | CA | 149K   |  1.55M  |  21.58M  |
  France                   | FR | 292K   |  2.43M  |  27.73M  |
