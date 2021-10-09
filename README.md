@@ -45,6 +45,8 @@ Here you can find a JSON with the [Lexical affinity matrix](http://geo.ingeotec.
 
 ## Corpora
 
+We collected Spanish tweets from 2016 to 2019 using the Twitter API (public stream) to create our manuscript and our resources. The final corpora is described below:
+
 | country            | code   | number of users | number of tweets | number of tokens |
 |:----------         | ------ |          ------:|          -------:|        ---------:|
 | Argentina          | AR | 1,376K | 234.22M | 2,887.92M |
