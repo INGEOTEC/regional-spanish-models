@@ -9,7 +9,6 @@ lang: en-US
 We created 26 word-embedding models with [https://fasttext.cc/](fastText), one per country. We learned 300 dimension vectors and use default hyper-parameters.
 
 
-
 _A large scale lexical and semantic analysis of Spanish language variations in Twitter._ Eric S. Tellez, Daniela Moctezuma, Sabino Miranda, and Mario Graff. ARXIV URL.
 
 ## Models
