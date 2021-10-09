@@ -8,20 +8,19 @@ lang: en-US
 # Regional models
 We created 26 word-embedding models with [https://fasttext.cc/](fastText), one per country. We learned 300 dimension vectors and use default hyper-parameters.
 
-
 _A large scale lexical and semantic analysis of Spanish language variations in Twitter._ Eric S. Tellez, Daniela Moctezuma, Sabino Miranda, and Mario Graff. ARXIV URL.
 
-## Models
+# Semantic models
 
 
-[Argentina (AR)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/AR.bin)   | [Bolivia (BO)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/BO.bin)    | [Brazil (BR)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/BR.bin)        | [Canadá (CA)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/CA.bin)                   | [Chile (CL)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/CL.bin)     |
+|    |    |    |    |    |
+|----|----|----|----|----|
+| [Argentina (AR)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/AR.bin)   | [Bolivia (BO)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/BO.bin)    | [Brazil (BR)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/BR.bin)        | [Canadá (CA)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/CA.bin)                   | [Chile (CL)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/CL.bin)     |
 | [Colombia (CO)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/CO.bin)    | [Costa Rica (CR)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/CR.bin) | [Cuba (CU)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/CU.bin)          | [República Dominicana (DO)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/DO.bin)     | [Ecuador (EC)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/EC.bin)   |
 | [España (ES)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/ES.bin)      | [Francia (FR)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/FR.bin)    | [Great Britain (GB)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/GB.bin) | [Guinea Equatorial (GQ)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/GQ.bin)        | [Guatemala (GT)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/GT.bin) |
 | [Honduras (HN)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/HN.bin)    | [México (MX)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/MX.bin)     | [Nicaragua (NI)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/NI.bin)     | [Panamá (PA)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/PA.bin)                   | [Perú (PE)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/PE.bin)      |
 | [Puerto Rico (PR)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/PR.bin) | [Paraguay (PY)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/PY.bin)   | [El Salvador (SV)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/SV.bin)   | [United States of America (US)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/US.bin) | [Uruguay (UY)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/UY.bin)   |
-| [Venezuela (VE)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/VE.bin) 
-
-**LARGER MODEL:**   [ALL](http://geo.ingeotec.mx/~sadit/regional-spanish-models/ALL.bin)
+| [Venezuela (VE)](http://geo.ingeotec.mx/~sadit/regional-spanish-models/VE.bin)   |                           |                              |                                         | **LARGE:**   [ALL](http://geo.ingeotec.mx/~sadit/regional-spanish-models/ALL.bin) | 
 
 Our _ALL_ model is learned from the entire corpora. 
 
