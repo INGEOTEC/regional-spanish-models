@@ -45,8 +45,8 @@ Here you can find a JSON with the [Lexical affinity matrix](http://geo.ingeotec.
 
 ## Corpora
 
-| country | code | number of users | number of tweets | number of tokens |
-|:----------         | ------ | ------:| -------:| ---------:|
+| country            | code   | number of users | number of tweets | number of tokens |
+|:----------         | ------ |          ------:|          -------:|        ---------:|
 | Argentina          | AR | 1,376K | 234.22M | 2,887.92M |
 | Bolivia            | BO | 36K    |  1.15M  |    20.99M |
 | Chile              | CL | 415K   | 45.29M  |   719.24M |
