@@ -1,7 +1,7 @@
 
 # Regionalized word embeddings for the Spanish-language
 
-These site shares the regionalized resources presented in the following manuscript:
+This site shares the regionalized resources presented in the following manuscript:
 
 _A large scale lexical and semantic analysis of Spanish language variations in Twitter._ Eric S. Tellez, Daniela Moctezuma, Sabino Miranda, and Mario Graff. https://arxiv.org/abs/2110.06128.
 
