@@ -1,10 +1,7 @@
 
 # Regionalized word embeddings for the Spanish-language
 
-## Regional models
-We created 26 word-embedding models with [fastText](https://fasttext.cc/), one per country. We learned 300 dimension vectors and use default hyper-parameters.
-
-It is based on the following article:
+These site shares the regionalized resources presented in the following manuscript:
 
 _A large scale lexical and semantic analysis of Spanish language variations in Twitter._ Eric S. Tellez, Daniela Moctezuma, Sabino Miranda, and Mario Graff. https://arxiv.org/abs/2110.06128.
 
@@ -20,7 +17,7 @@ _A large scale lexical and semantic analysis of Spanish language variations in T
 ```
 
 # Semantic models
-
+We created 26 word-embedding models with [fastText](https://fasttext.cc/), one per country. We learned 300 dimension vectors and use default hyper-parameters.
 
 |    |    |    |    |    |
 |----|----|----|----|----|
