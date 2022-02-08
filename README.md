@@ -83,9 +83,14 @@ Take a look on this [notebook](https://github.com/sadit/RegionalSpanish/blob/mai
 # Regional emojis
 
 # Lexical and semantic comparative between regions
-<div>
-<img src="https://raw.githubusercontent.com/sadit/RegionalSpanish/main/figs/fig-common-words-lexical-affinity-matrix.png" width="49%" alt="lexical voc" />
-<img src="https://raw.githubusercontent.com/sadit/RegionalSpanish/main/figs/fig-common-words-semantic-affinity-matrix.png" width="49%" alt="semantic" />
+Affinity matrices of the Spanish language regional vocabularies using lexical (left) and semantic models (right.)
+<div style="display: inline-block; width: 49%; vertical-align: top;">
+<img src="https://raw.githubusercontent.com/sadit/RegionalSpanish/main/figs/fig-common-words-lexical-affinity-matrix.png" width="100%" alt="lexical" />
+Lexical comparison (using inverse document frequencies as weights.) It uses the set of common words to reduce the distance values.
+</div>
+<div style="display: inline-block; width: 49%; vertical-align: top;">
+<img src="https://raw.githubusercontent.com/sadit/RegionalSpanish/main/figs/fig-common-words-semantic-affinity-matrix.png" width="100%" alt="semantic" />
+Semantic comparison. It represents each region as the  [all-knn graph](https://en.wikipedia.org/wiki/Nearest_neighbor_graph) using each regional word embeddings as input for the knn. We used $k=33$.
 </div>
 
 ## 2D UMAP visualizations
