@@ -60,7 +60,7 @@ Our _ALL_ model is learned from the entire corpora.
 
 # Regional word embeddings (semantic) and vocabularies (lexical)
 
-Regional word embeddings for variations of the Spanish language. For the following UMAP 2D projections we selected a subset of more than 100K tokens that appear in at least 10 regions. 
+Regional word embeddings for variations of the Spanish language. For the following UMAP 2D projections we selected a subset of more than 100K tokens that appear in at least 10 regions (see this [notebook](https://github.com/sadit/RegionalSpanish/blob/main/notebooks/common-vocabulary.ipynb) for more details.)
 
 <div style="display: inline-block; width: 32%; vertical-align: top;">
 <img src="https://raw.githubusercontent.com/sadit/RegionalSpanish/main/figs/fig-umap-common-voc-ALL.png" width="100%" alt="lexical" />
@@ -86,11 +86,11 @@ Take a look on this [notebook](https://github.com/sadit/RegionalSpanish/blob/mai
 Affinity matrices of the Spanish language regional vocabularies using lexical (left) and semantic models (right.)
 <div style="display: inline-block; width: 49%; vertical-align: top;">
 <img src="https://raw.githubusercontent.com/sadit/RegionalSpanish/main/figs/fig-common-words-lexical-affinity-matrix.png" width="100%" alt="lexical" />
-Lexical comparison (using inverse document frequencies as weights.) It uses the set of common words to reduce the distance values.
+Lexical comparison (using inverse document frequencies as weights.) It uses the set of common words to reduce the distance values. You can see more details in this <a href="https://github.com/sadit/RegionalSpanish/blob/main/notebooks/visualize-common-voc-lexical.ipynb">notebook</a>.
 </div>
 <div style="display: inline-block; width: 49%; vertical-align: top;">
 <img src="https://raw.githubusercontent.com/sadit/RegionalSpanish/main/figs/fig-common-words-semantic-affinity-matrix.png" width="100%" alt="semantic" />
-Semantic comparison. It represents each region as the  [all-knn graph](https://en.wikipedia.org/wiki/Nearest_neighbor_graph) using each regional word embeddings as input for the knn. We used $k=33$.
+Semantic comparison. It represents each region as the  <a href="https://en.wikipedia.org/wiki/Nearest_neighbor_graph">all-knn graph</a> using each regional word embeddings as input for the knn. We used k=33 and the cosine distance as weights. The procedure is detailed <a href="https://github.com/sadit/RegionalSpanish/blob/main/src/umap-embeddings-with-common-voc.jl">here</a>.
 </div>
 
 ## 2D UMAP visualizations
