@@ -62,15 +62,15 @@ Our _ALL_ model is learned from the entire corpora.
 
 Regional word embeddings for variations of the Spanish language. For the following UMAP 2D projections we selected a subset of more than 100K tokens that appear in at least 10 regions. 
 
-<div style="display: inline-block; width: 33%;">
+<div style="display: inline-block; width: 32%; vertical-align: top;">
 <img src="https://raw.githubusercontent.com/sadit/RegionalSpanish/main/figs/fig-umap-common-voc-ALL.png" width="100%" alt="lexical" />
 All regions combined - Spanish language.
 </div>
-<div style="display: inline-block; width: 33%;">
+<div style="display: inline-block; width: 32%;">
 <img src="https://raw.githubusercontent.com/sadit/RegionalSpanish/main/figs/fig-umap-common-voc-AR.png" width="100%" alt="lexical" />
 Argentinean variation of the Spanish language
 </div>
-<div style="display: inline-block; width: 33%;">
+<div style="display: inline-block; width: 32%; vertical-align: top;">
 <img src="https://raw.githubusercontent.com/sadit/RegionalSpanish/main/figs/fig-umap-common-voc-MX.png" width="100%" alt="lexical" />
 Mexican variation of the Spanish language
 </div>
@@ -89,23 +89,17 @@ Take a look on this [notebook](https://github.com/sadit/RegionalSpanish/blob/mai
 </div>
 
 ## 2D UMAP visualizations
-<div style="display: inline-block; width: 33%;">
-<figure>
+<div style="display: inline-block; width: 32%; vertical-align: top;">
 <img src="https://raw.githubusercontent.com/sadit/RegionalSpanish/main/figs/fig-voc-lexical-umap.png" width="100%" alt="lexical" />
-<figcaption>2d UMAP projection of regional vocabularies (cosine similarity)</figcaption>
-</figure>
+2D UMAP projection of regional vocabularies (cosine similarity)
 </div>
-<div style="display: inline-block; width: 33%;">
-<figure>
+<div style="display: inline-block; width: 32%; vertical-align: top;">
 <img src="https://raw.githubusercontent.com/sadit/RegionalSpanish/main/figs/fig-voc-semantic-umap.png" width="100%" alt="lexical" />
-<figcaption>2d UMAP projection of regional word embeddings (cosine similarity)</figcaption>
-</figure>
+2D UMAP projection of regional word embeddings (cosine similarity)
 </div>
-<div style="display: inline-block; width: 33%;">
-<figure>
+<div style="display: inline-block; width: 32%; vertical-align: top;">
 <img src="https://raw.githubusercontent.com/sadit/RegionalSpanish/main/figs/fig-emo-umap.png" width="100%" alt="emoji" />
-<figcaption>2d UMAP projection of regional emojis (cosine similarity)</figcaption>
-</figure>
+2D UMAP projection of regional emojis (cosine similarity)
 </div>
 
 ## More resources:
