@@ -54,7 +54,7 @@ Our _ALL_ model is learned from the entire corpora.
 **Note:** There is previous version of the ALL word embedding with more than 2M tokens [ALL 2M](http://geo.ingeotec.mx/~sadit/regional-spanish-models/ALL-2M.bin)
 
 
-## Semantic affinity matrix
+## Analysis of regional resources
 
 ![Geographic visualization of the semantic similarity, similar colors imply semantic similarity](fig-region-emo-colors-clustering-umap-3.png)
 
