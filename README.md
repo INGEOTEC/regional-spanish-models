@@ -16,6 +16,8 @@ _A large scale lexical and semantic analysis of Spanish language variations in T
 }
 ```
 
+Regional models talk (in Spanish): [https://sadit.github.io/regional-spanish-models-talk-2022/]()
+
 # Semantic models
 We created 26 word-embedding models with [fastText](https://fasttext.cc/), one per country. We learned 300 dimension vectors and use default hyper-parameters. We provide two kinds of models, `bin` which correspond to binary version of the model and `vec` which is the ascii version of the same model; ascii version can be parsed and used without fastText and also are used by the same fastText to create supervised (clasification) models with pretrained word embeddings.
 
