@@ -18,6 +18,8 @@ _A large scale lexical and semantic analysis of Spanish language variations in T
 
 More is available in the regional models [talk](https://sadit.github.io/regional-spanish-models-talk-2022/) (in Spanish).
 
+
+
 # Regional language models
 We created eight BERT-based language models, called BILMA (BERT in Latin America). Each model consists on 4 attention heads and outputs 512-dimensional vectors. Each model was created using geotagged Twitter messages from the stream API.
 
@@ -82,7 +84,6 @@ We created 26 word-embedding models with [fastText](https://fasttext.cc/), one p
 - Venezuela (VE) - [bin](http://geo.ingeotec.mx/~sadit/regional-spanish-models/VE.bin) - [vec](http://geo.ingeotec.mx/~sadit/regional-spanish-models/VE.vec)                            
                                       
  **LARGE:**   [ALL](http://geo.ingeotec.mx/~sadit/regional-spanish-models/ALL.bin)
-
 
 Our _ALL_ model is learned from the entire corpora. 
 
@@ -168,15 +169,16 @@ Our resources were created from geotagged Twitter messages from listening the pu
 - <a href=http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-UY.tsv.gz>UY</a>
 - <a href=http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-VE.tsv.gz>VE</a>
 
-## More resources:
+## More resources
 
 Please clone our github repository:
 
-- <a href="https://github.com/sadit/RegionalSpanish">
+- <a href="https://github.com/sadit/RegionalSpanish">https://github.com/sadit/RegionalSpanish</a>
 
 there you will find more metadata, resources, and code: regional vocabulary, regional embeddings, knn graphs of concepts (tokens), token comparison among regions, among others.
 
 BILMA language models are availabe at:
+
 - [https://github.com/msubrayada/bilma](https://github.com/msubrayada/bilma)
 
 # Corpora
