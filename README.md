@@ -18,9 +18,14 @@ _A large scale lexical and semantic analysis of Spanish language variations in T
 
 As part of the INGEOTEC research group from INFOTEC and CentroGEO.
 
-More is available in the regional models [talk](https://sadit.github.io/regional-spanish-models-talk-2022/) (in Spanish).
+Here you will find regionalized word embeddings and language models resources for Spanish countries, created with Twitter messages from the public stream. Our aim is to provide these resources and tools that help on developing more sophisticated applications and models that can tackle complex NLP tasks that can take advantage of Spanish variants. More is available in the regional models [talk](https://sadit.github.io/regional-spanish-models-talk-2022/) (in Spanish).
 
 
+## Useful short cuts in this site:
+- [Regional language models](#regional-language-models)
+- [Regional word embeddings](#regional-semantic-models)
+- [Corpora sample](#corpora-identifiers)
+- [Information about the corpora](#corpora)
 
 # Regional language models
 We created eight BERT-based language models, called BILMA (BERT in Latin America). Each model consists on 4 attention heads and outputs 512-dimensional vectors. Each model was created using geotagged Twitter messages from the stream API.
