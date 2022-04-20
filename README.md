@@ -44,21 +44,21 @@ In this repository you will find the package backend to use the models and some 
 
 ### Models:
 - AR: <a href="bilma_small_AR_epoch-1.h5">model trained on MLM</a> or
-      <a href="bilma_small_AR_epoch-1_classification_epochs-17.h5">model trained for predict emoticon.</a>
+      <a href="bilma_small_AR_epoch-1_classification_epochs-17.h5">model trained for predict emojis.</a>
 - CL: <a href="bilma_small_CL_epoch-3.h5">model trained on MLM</a> or
-      <a href="bilma_small_CL_epoch-3_classification_epochs-9.h5">model trained for predict emoticon.</a>
+      <a href="bilma_small_CL_epoch-3_classification_epochs-9.h5">model trained for predict emojis.</a>
 - CO: <a href="bilma_small_CO_epoch-1.h5">model trained on MLM</a> or
-      <a href="bilma_small_CO_epoch-1_classification_epochs-11.h5">model trained for predict emoticon.</a>
+      <a href="bilma_small_CO_epoch-1_classification_epochs-11.h5">model trained for predict emojis.</a>
 - ES: <a href="bilma_small_ES_epoch-1.h5">model trained on MLM</a> or
-      <a href="bilma_small_ES_epoch-1_classification_epochs-9.h5">model trained for predict emoticon.</a>
+      <a href="bilma_small_ES_epoch-1_classification_epochs-9.h5">model trained for predict emojis.</a>
 - MX: <a href="bilma_small_MX_epoch-1.h5">model trained on MLM</a> or
-      <a href="bilma_small_MX_epoch-1_classification_epochs-13.h5">model trained for predict emoticon.</a>
+      <a href="bilma_small_MX_epoch-1_classification_epochs-13.h5">model trained for predict emojis.</a>
 - US: <a href="bilma_small_US_epoch-3.h5">model trained on MLM</a> or
-      <a href="bilma_small_US_epoch-3_classification_epochs-11.h5">model trained for predict emoticon.</a>
+      <a href="bilma_small_US_epoch-3_classification_epochs-11.h5">model trained for predict emojis.</a>
 - UY: <a href="bilma_small_UY_epoch-3.h5">model trained on MLM</a> or
-      <a href="bilma_small_UY_epoch-3_classification_epochs-13.h5">model trained for predict emoticon.</a>
+      <a href="bilma_small_UY_epoch-3_classification_epochs-13.h5">model trained for predict emojis.</a>
 - VE: <a href="bilma_small_VE_epoch-3.h5">model trained on MLM</a> or
-      <a href="bilma_small_VE_epoch-3_classification_epochs-12.h5">model trained for predict emoticon.</a>
+      <a href="bilma_small_VE_epoch-3_classification_epochs-12.h5">model trained for predict emojis.</a>
 
 Get vocabulary from the following link:  <a href="vocab_file_All.txt">vocabulary file</a>; it is common to all models
 
