@@ -138,11 +138,15 @@ Semantic comparison. It represents each region as the  <a href="https://en.wikip
 </div>
 
 ## More resources:
-<div>
-Please clone our <a href="https://github.com/sadit/RegionalSpanish">github repository</a>
-where you can find more metadata, resources, and code: regional vocabulary, regional embeddings, knn graphs of concepts (tokens), token comparison among regions, among others.
-</div>
 
+Please clone our github repository:
+
+- <a href="https://github.com/sadit/RegionalSpanish">
+
+there you will find more metadata, resources, and code: regional vocabulary, regional embeddings, knn graphs of concepts (tokens), token comparison among regions, among others.
+
+BILMA language models are availabe at:
+- [https://github.com/msubrayada/bilma](https://github.com/msubrayada/bilma)
 
 ## Corpora
 
