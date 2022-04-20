@@ -16,6 +16,8 @@ _A large scale lexical and semantic analysis of Spanish language variations in T
 }
 ```
 
+As part of the INGEOTEC research group from INFOTEC and CentroGEO.
+
 More is available in the regional models [talk](https://sadit.github.io/regional-spanish-models-talk-2022/) (in Spanish).
 
 
