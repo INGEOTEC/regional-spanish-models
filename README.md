@@ -3,7 +3,7 @@
 
 This site shares the regionalized resources presented in the following manuscript:
 
-_A large scale lexical and semantic analysis of Spanish language variations in Twitter._ Eric S. Tellez, Daniela Moctezuma, Sabino Miranda, and Mario Graff. https://arxiv.org/abs/2110.06128.
+_A large scale lexical and semantic analysis of Spanish language variations in Twitter._ Eric S. Tellez, Daniela Moctezuma, Sabino Miranda, Mario Graff, and Guillermo Ruiz, https://arxiv.org/abs/2110.06128.
 
 ```
 @misc{tellez2021large,
@@ -153,31 +153,31 @@ Semantic comparison. It represents each region as the  <a href="https://en.wikip
 # Corpora identifiers
 Our resources were created from geotagged Twitter messages from listening the public stream from 2016 to 2019 on countries with a large number of Spanish-speakers. We share a sample of this corpora to allow researchers and enthusiastic people to fetch and explore the data. In the following URLs you will find 50k message identifiers (per country). You can use a tool like [Twarc](https://github.com/DocNow/twarc) to rehydrate identifiers to full messages.
 
-- <a href=http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-AR.tsv.gz>AR</a>
-- <a href=http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-BO.tsv.gz>BO</a>
-- <a href=http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-BR.tsv.gz>BR</a>
-- <a href=http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-CA.tsv.gz>CA</a>
-- <a href=http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-CL.tsv.gz>CL</a>
-- <a href=http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-CO.tsv.gz>CO</a>
-- <a href=http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-CR.tsv.gz>CR</a>
-- <a href=http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-CU.tsv.gz>CU</a>
-- <a href=http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-DO.tsv.gz>DO</a>
-- <a href=http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-EC.tsv.gz>EC</a>
-- <a href=http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-ES.tsv.gz>ES</a>
-- <a href=http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-FR.tsv.gz>FR</a>
-- <a href=http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-GB.tsv.gz>GB</a>
-- <a href=http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-GT.tsv.gz>GT</a>
-- <a href=http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-HN.tsv.gz>HN</a>
-- <a href=http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-MX.tsv.gz>MX</a>
-- <a href=http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-NI.tsv.gz>NI</a>
-- <a href=http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-PA.tsv.gz>PA</a>
-- <a href=http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-PE.tsv.gz>PE</a>
-- <a href=http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-PR.tsv.gz>PR</a>
-- <a href=http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-PY.tsv.gz>PY</a>
-- <a href=http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-SV.tsv.gz>SV</a>
-- <a href=http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-US.tsv.gz>US</a>
-- <a href=http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-UY.tsv.gz>UY</a>
-- <a href=http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-VE.tsv.gz>VE</a>
+- [AR](http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-AR.tsv.gz)
+- [BO](http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-BO.tsv.gz)
+- [BR](http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-BR.tsv.gz)
+- [CA](http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-CA.tsv.gz)
+- [CL](http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-CL.tsv.gz)
+- [CO](http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-CO.tsv.gz)
+- [CR](http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-CR.tsv.gz)
+- [CU](http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-CU.tsv.gz)
+- [DO](http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-DO.tsv.gz)
+- [EC](http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-EC.tsv.gz)
+- [ES](http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-ES.tsv.gz)
+- [FR](http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-FR.tsv.gz)
+- [GB](http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-GB.tsv.gz)
+- [GT](http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-GT.tsv.gz)
+- [HN](http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-HN.tsv.gz)
+- [MX](http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-MX.tsv.gz)
+- [NI](http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-NI.tsv.gz)
+- [PA](http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-PA.tsv.gz)
+- [PE](http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-PE.tsv.gz)
+- [PR](http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-PR.tsv.gz)
+- [PY](http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-PY.tsv.gz)
+- [SV](http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-SV.tsv.gz)
+- [US](http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-US.tsv.gz)
+- [UY](http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-UY.tsv.gz)
+- [VE](http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-VE.tsv.gz)
 
 ## More resources
 
