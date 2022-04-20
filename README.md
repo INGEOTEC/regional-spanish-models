@@ -25,7 +25,12 @@ BILMA models require Python 3 and Tensorflow 2.4. It consists of two main pieces
 
 - [https://github.com/msubrayada/bilma](https://github.com/msubrayada/bilma)
 
-Models:
+In this repository you will find the package backend to use the models and some tutorials and examples, for instance:
+
+- <a href="https://github.com/msubrayada/bilma/blob/main/bilma-cls-demo.ipynb">classification example</a>
+- <a href="https://github.com/msubrayada/bilma/blob/main/bilma-demo.ipynb">text mining by masking</a>
+
+### Models:
 - AR: <a href="bilma_small_AR_epoch-1.h5">model trained on MLM</a> or
       <a href="bilma_small_AR_epoch-1_classification_epochs-17.h5">model trained for predict emoticon.</a>
 - CL: <a href="bilma_small_CL_epoch-3.h5">model trained on MLM</a> or
@@ -43,7 +48,7 @@ Models:
 - VE: <a href="bilma_small_VE_epoch-3.h5">model trained on MLM</a> or
       <a href="bilma_small_VE_epoch-3_classification_epochs-12.h5">model trained for predict emoticon.</a>
 
-<p>Get vocabulary from the following link:  <a href="vocab_file_All.txt">vocabulary file</a>; it is common to all models </p>
+Get vocabulary from the following link:  <a href="vocab_file_All.txt">vocabulary file</a>; it is common to all models
 
 
 # Regional semantic models
@@ -109,9 +114,6 @@ Colors are also 3D UMAP projections, and therefore, color clusters are also mean
 
 Take a look on this [notebook](https://github.com/sadit/RegionalSpanish/blob/main/notebooks/explore-region-similarities.ipynb). Here you how definitions vary from region to region, for instance see the definition of _iglesia_ (church), where US spanish speakers define as evangeliques and other regions catholics. Another example comes from the _america_ token which referes to geographic terms in almost any region and football soocker teams for the MX region.
 
-
-# Regional emojis
-
 # Lexical and semantic comparative between regions
 Affinity matrices of the Spanish language regional vocabularies using lexical (left) and semantic models (right.)
 <div style="display: inline-block; width: 49%; vertical-align: top;">
@@ -137,6 +139,35 @@ Semantic comparison. It represents each region as the  <a href="https://en.wikip
 2D UMAP projection of regional emojis (cosine similarity)
 </div>
 
+# Corpora identifiers
+Our resources were created from geotagged Twitter messages from listening the public stream from 2016 to 2019 on countries with a large number of Spanish-speakers. We share a sample of this corpora to allow researchers and enthusiastic people to fetch and explore the data. In the following URLs you will find 50k message identifiers (per country). You can use a tool like [Twarc](https://github.com/DocNow/twarc) to rehydrate identifiers to full messages.
+
+- <a href=http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-AR.tsv.gz>AR</a>
+- <a href=http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-BO.tsv.gz>BO</a>
+- <a href=http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-BR.tsv.gz>BR</a>
+- <a href=http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-CA.tsv.gz>CA</a>
+- <a href=http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-CL.tsv.gz>CL</a>
+- <a href=http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-CO.tsv.gz>CO</a>
+- <a href=http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-CR.tsv.gz>CR</a>
+- <a href=http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-CU.tsv.gz>CU</a>
+- <a href=http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-DO.tsv.gz>DO</a>
+- <a href=http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-EC.tsv.gz>EC</a>
+- <a href=http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-ES.tsv.gz>ES</a>
+- <a href=http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-FR.tsv.gz>FR</a>
+- <a href=http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-GB.tsv.gz>GB</a>
+- <a href=http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-GT.tsv.gz>GT</a>
+- <a href=http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-HN.tsv.gz>HN</a>
+- <a href=http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-MX.tsv.gz>MX</a>
+- <a href=http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-NI.tsv.gz>NI</a>
+- <a href=http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-PA.tsv.gz>PA</a>
+- <a href=http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-PE.tsv.gz>PE</a>
+- <a href=http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-PR.tsv.gz>PR</a>
+- <a href=http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-PY.tsv.gz>PY</a>
+- <a href=http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-SV.tsv.gz>SV</a>
+- <a href=http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-US.tsv.gz>US</a>
+- <a href=http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-UY.tsv.gz>UY</a>
+- <a href=http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-VE.tsv.gz>VE</a>
+
 ## More resources:
 
 Please clone our github repository:
@@ -148,7 +179,7 @@ there you will find more metadata, resources, and code: regional vocabulary, reg
 BILMA language models are availabe at:
 - [https://github.com/msubrayada/bilma](https://github.com/msubrayada/bilma)
 
-## Corpora
+# Corpora
 
 We collected Spanish tweets from 2016 to 2019 using the Twitter API (public stream) to create our manuscript and our resources. The final corpora is described below:
 
