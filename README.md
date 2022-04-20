@@ -1,5 +1,5 @@
 
-# Regionalized word embeddings for the Spanish-language
+# Regionalized resources for the Spanish-language
 
 This site shares the regionalized resources presented in the following manuscript:
 
@@ -16,9 +16,37 @@ _A large scale lexical and semantic analysis of Spanish language variations in T
 }
 ```
 
-Regional models [talk](https://sadit.github.io/regional-spanish-models-talk-2022/) (in Spanish).
+More is available in the regional models [talk](https://sadit.github.io/regional-spanish-models-talk-2022/) (in Spanish).
 
-# Semantic models
+# Regional language models
+We created eight BERT-based language models, called BILMA (BERT in Latin America). Each model consists on 4 attention heads and outputs 512-dimensional vectors. Each model was created using geotagged Twitter messages from the stream API.
+
+BILMA models require Python 3 and Tensorflow 2.4. It consists of two main pieces, the BILMA Python package and the actual models
+
+- [https://github.com/msubrayada/bilma](https://github.com/msubrayada/bilma)
+
+Models:
+- AR: <a href="bilma_small_AR_epoch-1.h5">model trained on MLM</a> or
+      <a href="bilma_small_AR_epoch-1_classification_epochs-17.h5">model trained for predict emoticon.</a>
+- CL: <a href="bilma_small_CL_epoch-3.h5">model trained on MLM</a> or
+      <a href="bilma_small_CL_epoch-3_classification_epochs-9.h5">model trained for predict emoticon.</a>
+- CO: <a href="bilma_small_CO_epoch-1.h5">model trained on MLM</a> or
+      <a href="bilma_small_CO_epoch-1_classification_epochs-11.h5">model trained for predict emoticon.</a>
+- ES: <a href="bilma_small_ES_epoch-1.h5">model trained on MLM</a> or
+      <a href="bilma_small_ES_epoch-1_classification_epochs-9.h5">model trained for predict emoticon.</a>
+- MX: <a href="bilma_small_MX_epoch-1.h5">model trained on MLM</a> or
+      <a href="bilma_small_MX_epoch-1_classification_epochs-13.h5">model trained for predict emoticon.</a>
+- US: <a href="bilma_small_US_epoch-3.h5">model trained on MLM</a> or
+      <a href="bilma_small_US_epoch-3_classification_epochs-11.h5">model trained for predict emoticon.</a>
+- UY: <a href="bilma_small_UY_epoch-3.h5">model trained on MLM</a> or
+      <a href="bilma_small_UY_epoch-3_classification_epochs-13.h5">model trained for predict emoticon.</a>
+- VE: <a href="bilma_small_VE_epoch-3.h5">model trained on MLM</a> or
+      <a href="bilma_small_VE_epoch-3_classification_epochs-12.h5">model trained for predict emoticon.</a>
+
+<p>Get vocabulary from the following link:  <a href="vocab_file_All.txt">vocabulary file</a>; it is common to all models </p>
+
+
+# Regional semantic models
 We created 26 word-embedding models with [fastText](https://fasttext.cc/), one per country. We learned 300 dimension vectors and use default hyper-parameters. We provide two kinds of models, `bin` which correspond to binary version of the model and `vec` which is the ascii version of the same model; ascii version can be parsed and used without fastText and also are used by the same fastText to create supervised (clasification) models with pretrained word embeddings.
 
 - Argentina (AR) - [bin](http://geo.ingeotec.mx/~sadit/regional-spanish-models/AR.bin) - [vec](http://geo.ingeotec.mx/~sadit/regional-spanish-models/AR.vec)
