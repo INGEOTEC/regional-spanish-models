@@ -5,11 +5,11 @@ date: "21th April 2016"
 ---
 
 
-# Regionalized word embeddings for the Spanish-language
+# Regionalized resources for the Spanish-language
 
 This site shares the regionalized resources presented in the following manuscript:
 
-_A large scale lexical and semantic analysis of Spanish language variations in Twitter._ Eric S. Tellez, Daniela Moctezuma, Sabino Miranda, and Mario Graff. https://arxiv.org/abs/2110.06128.
+_A large scale lexical and semantic analysis of Spanish language variations in Twitter._ Eric S. Tellez, Daniela Moctezuma, Sabino Miranda, Mario Graff, and Guillermo Ruiz, https://arxiv.org/abs/2110.06128.
 
 ```
 @misc{tellez2021large,
@@ -22,7 +22,54 @@ _A large scale lexical and semantic analysis of Spanish language variations in T
 }
 ```
 
-# Semantic models
+As part of the INGEOTEC research group from INFOTEC and CentroGEO.
+
+Here you will find regionalized word embeddings and language models resources for Spanish countries, created with Twitter messages from the public stream. Our aim is to provide these resources and tools that help on developing more sophisticated applications and models that can tackle complex NLP tasks that can take advantage of Spanish variants. More is available in the regional models [talk](https://sadit.github.io/regional-spanish-models-talk-2022/) (in Spanish).
+
+If you are visualizing this site from Github repo, perhaps you like more the Github pages site:
+
+- [https://ingeotec.github.io/regional-spanish-models/](https://ingeotec.github.io/regional-spanish-models/)
+
+## Useful short cuts in this site:
+- [Regional language models](#regional-language-models)
+- [Regional word embeddings](#regional-semantic-models)
+- [Corpora sample](#corpora-identifiers)
+- [Information about the corpora](#corpora)
+
+# Regional language models
+We created eight BERT-based language models, called BILMA (BERT in Latin America). Each model consists on 4 attention heads and outputs 512-dimensional vectors. Each model was created using geotagged Twitter messages from the stream API.
+
+BILMA models require Python 3 and Tensorflow 2.4. It consists of two main pieces, the BILMA Python package and the actual models
+
+- [https://github.com/msubrayada/bilma](https://github.com/msubrayada/bilma)
+
+In this repository you will find the package backend to use the models and some tutorials and examples, for instance:
+
+- <a href="https://github.com/msubrayada/bilma/blob/main/bilma-cls-demo.ipynb">classification example</a>
+- <a href="https://github.com/msubrayada/bilma/blob/main/bilma-demo.ipynb">text mining by masking</a>
+
+### Models:
+- AR: <a href="bilma_small_AR_epoch-1.h5">model trained on MLM</a> or
+      <a href="bilma_small_AR_epoch-1_classification_epochs-17.h5">model trained for predict emojis.</a>
+- CL: <a href="bilma_small_CL_epoch-3.h5">model trained on MLM</a> or
+      <a href="bilma_small_CL_epoch-3_classification_epochs-9.h5">model trained for predict emojis.</a>
+- CO: <a href="bilma_small_CO_epoch-1.h5">model trained on MLM</a> or
+      <a href="bilma_small_CO_epoch-1_classification_epochs-11.h5">model trained for predict emojis.</a>
+- ES: <a href="bilma_small_ES_epoch-1.h5">model trained on MLM</a> or
+      <a href="bilma_small_ES_epoch-1_classification_epochs-9.h5">model trained for predict emojis.</a>
+- MX: <a href="bilma_small_MX_epoch-1.h5">model trained on MLM</a> or
+      <a href="bilma_small_MX_epoch-1_classification_epochs-13.h5">model trained for predict emojis.</a>
+- US: <a href="bilma_small_US_epoch-3.h5">model trained on MLM</a> or
+      <a href="bilma_small_US_epoch-3_classification_epochs-11.h5">model trained for predict emojis.</a>
+- UY: <a href="bilma_small_UY_epoch-3.h5">model trained on MLM</a> or
+      <a href="bilma_small_UY_epoch-3_classification_epochs-13.h5">model trained for predict emojis.</a>
+- VE: <a href="bilma_small_VE_epoch-3.h5">model trained on MLM</a> or
+      <a href="bilma_small_VE_epoch-3_classification_epochs-12.h5">model trained for predict emojis.</a>
+
+Get vocabulary from the following link:  <a href="vocab_file_All.txt">vocabulary file</a>; it is common to all models
+
+
+# Regional semantic models
 We created 26 word-embedding models with [fastText](https://fasttext.cc/), one per country. We learned 300 dimension vectors and use default hyper-parameters. We provide two kinds of models, `bin` which correspond to binary version of the model and `vec` which is the ascii version of the same model; ascii version can be parsed and used without fastText and also are used by the same fastText to create supervised (clasification) models with pretrained word embeddings.
 
 - Argentina (AR) -- 300d: [bin](http://geo.ingeotec.mx/~sadit/regional-spanish-models/AR.bin) [vec](http://geo.ingeotec.mx/~sadit/regional-spanish-models/AR.vec); 32d [bin](http://geo.ingeotec.mx/~sadit/regional-spanish-models/AR-32d.bin) [vec](http://geo.ingeotec.mx/~sadit/regional-spanish-models/AR-32d.vec); 16d [bin](http://geo.ingeotec.mx/~sadit/regional-spanish-models/AR-16d.bin) [vec](http://geo.ingeotec.mx/~sadit/regional-spanish-models/AR-16d.vec); 8d [bin](http://geo.ingeotec.mx/~sadit/regional-spanish-models/AR-8d.bin) [vec](http://geo.ingeotec.mx/~sadit/regional-spanish-models/AR-8d.vec)
@@ -52,7 +99,6 @@ We created 26 word-embedding models with [fastText](https://fasttext.cc/), one p
 - Uruguay (UY) -- 300d: [bin](http://geo.ingeotec.mx/~sadit/regional-spanish-models/UY.bin) [vec](http://geo.ingeotec.mx/~sadit/regional-spanish-models/UY.vec); 32d [bin](http://geo.ingeotec.mx/~sadit/regional-spanish-models/UY-32d.bin) [vec](http://geo.ingeotec.mx/~sadit/regional-spanish-models/UY-32d.vec); 16d [bin](http://geo.ingeotec.mx/~sadit/regional-spanish-models/UY-16d.bin) [vec](http://geo.ingeotec.mx/~sadit/regional-spanish-models/UY-16d.vec); 8d [bin](http://geo.ingeotec.mx/~sadit/regional-spanish-models/UY-8d.bin) [vec](http://geo.ingeotec.mx/~sadit/regional-spanish-models/UY-8d.vec)
 - Venezuela (VE) -- 300d: [bin](http://geo.ingeotec.mx/~sadit/regional-spanish-models/VE.bin) [vec](http://geo.ingeotec.mx/~sadit/regional-spanish-models/VE.vec); 32d [bin](http://geo.ingeotec.mx/~sadit/regional-spanish-models/VE-32d.bin) [vec](http://geo.ingeotec.mx/~sadit/regional-spanish-models/VE-32d.vec); 16d [bin](http://geo.ingeotec.mx/~sadit/regional-spanish-models/VE-16d.bin) [vec](http://geo.ingeotec.mx/~sadit/regional-spanish-models/VE-16d.vec); 8d [bin](http://geo.ingeotec.mx/~sadit/regional-spanish-models/VE-8d.bin) [vec](http://geo.ingeotec.mx/~sadit/regional-spanish-models/VE-8d.vec)
 - ALL (ALL) -- 300d: [bin](http://geo.ingeotec.mx/~sadit/regional-spanish-models/ALL.bin) [vec](http://geo.ingeotec.mx/~sadit/regional-spanish-models/ALL.vec); 32d [bin](http://geo.ingeotec.mx/~sadit/regional-spanish-models/ALL-32d.bin) [vec](http://geo.ingeotec.mx/~sadit/regional-spanish-models/ALL-32d.vec); 16d [bin](http://geo.ingeotec.mx/~sadit/regional-spanish-models/ALL-16d.bin) [vec](http://geo.ingeotec.mx/~sadit/regional-spanish-models/ALL-16d.vec); 8d [bin](http://geo.ingeotec.mx/~sadit/regional-spanish-models/ALL-8d.bin) [vec](http://geo.ingeotec.mx/~sadit/regional-spanish-models/ALL-8d.vec)
-
 
 
 Our _ALL_ model is learned from the entire corpora. 
@@ -85,9 +131,6 @@ Colors are also 3D UMAP projections, and therefore, color clusters are also mean
 
 Take a look on this [notebook](https://github.com/sadit/RegionalSpanish/blob/main/notebooks/explore-region-similarities.ipynb). Here you how definitions vary from region to region, for instance see the definition of _iglesia_ (church), where US spanish speakers define as evangeliques and other regions catholics. Another example comes from the _america_ token which referes to geographic terms in almost any region and football soocker teams for the MX region.
 
-
-# Regional emojis
-
 # Lexical and semantic comparative between regions
 Affinity matrices of the Spanish language regional vocabularies using lexical (left) and semantic models (right.)
 <div style="display: inline-block; width: 49%; vertical-align: top;">
@@ -113,14 +156,48 @@ Semantic comparison. It represents each region as the  <a href="https://en.wikip
 2D UMAP projection of regional emojis (cosine similarity)
 </div>
 
-## More resources:
-<div>
-Please clone our <a href="https://github.com/sadit/RegionalSpanish">github repository</a>
-where you can find more metadata, resources, and code: regional vocabulary, regional embeddings, knn graphs of concepts (tokens), token comparison among regions, among others.
-</div>
+# Corpora identifiers
+Our resources were created from geotagged Twitter messages from listening the public stream from 2016 to 2019 on countries with a large number of Spanish-speakers. We share a sample of this corpora to allow researchers and enthusiastic people to fetch and explore the data. In the following URLs you will find 50k message identifiers (per country). You can use a tool like [Twarc](https://github.com/DocNow/twarc) to rehydrate identifiers to full messages.
 
+- [AR](http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-AR.tsv.gz)
+- [BO](http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-BO.tsv.gz)
+- [BR](http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-BR.tsv.gz)
+- [CA](http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-CA.tsv.gz)
+- [CL](http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-CL.tsv.gz)
+- [CO](http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-CO.tsv.gz)
+- [CR](http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-CR.tsv.gz)
+- [CU](http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-CU.tsv.gz)
+- [DO](http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-DO.tsv.gz)
+- [EC](http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-EC.tsv.gz)
+- [ES](http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-ES.tsv.gz)
+- [FR](http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-FR.tsv.gz)
+- [GB](http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-GB.tsv.gz)
+- [GT](http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-GT.tsv.gz)
+- [HN](http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-HN.tsv.gz)
+- [MX](http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-MX.tsv.gz)
+- [NI](http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-NI.tsv.gz)
+- [PA](http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-PA.tsv.gz)
+- [PE](http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-PE.tsv.gz)
+- [PR](http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-PR.tsv.gz)
+- [PY](http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-PY.tsv.gz)
+- [SV](http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-SV.tsv.gz)
+- [US](http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-US.tsv.gz)
+- [UY](http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-UY.tsv.gz)
+- [VE](http://ingeotec.mx/~sadit/regional-spanish-sample/sample-id-VE.tsv.gz)
 
-## Corpora
+## More resources
+
+Please clone our github repository:
+
+- <a href="https://github.com/sadit/RegionalSpanish">https://github.com/sadit/RegionalSpanish</a>
+
+there you will find more metadata, resources, and code: regional vocabulary, regional embeddings, knn graphs of concepts (tokens), token comparison among regions, among others.
+
+BILMA language models are availabe at:
+
+- [https://github.com/msubrayada/bilma](https://github.com/msubrayada/bilma)
+
+# Corpora
 
 We collected Spanish tweets from 2016 to 2019 using the Twitter API (public stream) to create our manuscript and our resources. The final corpora is described below:
 
