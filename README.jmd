@@ -19,8 +19,9 @@ _A large scale lexical and semantic analysis of Spanish language variations in T
 # Semantic models
 We created 26 word-embedding models with [fastText](https://fasttext.cc/), one per country. We learned 300 dimension vectors and use default hyper-parameters. We provide two kinds of models, `bin` which correspond to binary version of the model and `vec` which is the ascii version of the same model; ascii version can be parsed and used without fastText and also are used by the same fastText to create supervised (clasification) models with pretrained word embeddings.
 
+| country            | code   | 300d |  32d | 16d  |   8d |
+|:----------         | ------ | ----:| ----:| ----:| ----:|
 ```julia; echo = false; results = :raw;
-
 for k in [
       "Argentina (AR)",
       "Bolivia (BO)",
@@ -50,9 +51,10 @@ for k in [
       "Venezuela (VE)",
       "ALL (ALL)"
       ]
-      cc = strip(last(split(k, '(')), ')')
-      l = "http://geo.ingeotec.mx/~sadit/regional-spanish-models"
-      println("""- $k -- 300d: [bin]($l/$cc.bin) [vec]($l/$cc.vec); 32d [bin]($l/$cc-32d.bin) [vec]($l/$cc-32d.vec); 16d [bin]($l/$cc-16d.bin) [vec]($l/$cc-16d.vec); 8d [bin]($l/$cc-8d.bin) [vec]($l/$cc-8d.vec)""")
+      country, cc = split(k, '(')
+      cc = strip(cc, ')')
+      l = "http://geo.ing1eotec.mx/~sadit/regional-spanish-models"
+      println("""| $k | [bin]($l/$cc.bin) [vec]($l/$cc.vec) | [bin]($l/$cc-32d.bin) [vec]($l/$cc-32d.vec) | [bin]($l/$cc-16d.bin) [vec]($l/$cc-16d.vec) | [bin]($l/$cc-8d.bin) [vec]($l/$cc-8d.vec) |""")
 end
 
 ```
