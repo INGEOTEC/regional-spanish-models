@@ -17,7 +17,7 @@ _A large scale lexical and semantic analysis of Spanish language variations in T
 ```
 
 # Semantic models
-We created 26 word-embedding models with [fastText](https://fasttext.cc/), one per country. We learned embeddings for several dimension and use default hyper-parameters. We provide two kinds of models, `bin` which correspond to binary version of the model and `vec` which is the ascii version of the same model; ascii version can be parsed and used without fastText and also are used by the same fastText to create supervised (clasification) models with pretrained word embeddings.
+We created word-embedding models with [fastText](https://fasttext.cc/), models are regionalized per country; we provide 4 different dimensionalities per region. We learned embeddings for several dimension and use default hyper-parameters. We provide two kinds of models, `bin` and `vec`, the prior is a binary model and the second an ascii version of the same model. The ascii version can be parsed and used without fastText and also are used by the same fastText to create supervised (clasification) models with pretrained word embeddings.
 
 | country            | code   | 300d |  32d | 16d  |   8d |
 |:----------         | ------ | ----:| ----:| ----:| ----:|
