@@ -53,8 +53,8 @@ for k in [
       ]
       country, cc = split(k, '(')
       cc = strip(cc, ')')
-      l = "http://geo.ing1eotec.mx/~sadit/regional-spanish-models"
-      println("""| $k | [bin]($l/$cc.bin) [vec]($l/$cc.vec) | [bin]($l/$cc-32d.bin) [vec]($l/$cc-32d.vec) | [bin]($l/$cc-16d.bin) [vec]($l/$cc-16d.vec) | [bin]($l/$cc-8d.bin) [vec]($l/$cc-8d.vec) |""")
+      l = "http://geo.ingeotec.mx/~sadit/regional-spanish-models"
+      println("""| $k | $cc | [bin]($l/$cc.bin) [vec]($l/$cc.vec) | [bin]($l/$cc-32d.bin) [vec]($l/$cc-32d.vec) | [bin]($l/$cc-16d.bin) [vec]($l/$cc-16d.vec) | [bin]($l/$cc-8d.bin) [vec]($l/$cc-8d.vec) |""")
 end
 
 ```
