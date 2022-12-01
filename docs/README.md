@@ -56,23 +56,24 @@ Our _ALL_ model is learned from the entire corpora.
 
 
 ## Analysis of regional resources
+Vocabulary similarity and geographical visualization, similar colors imply similarity.
+![Countries' vocabulary](https://github.com/INGEOTEC/regional-spanish-models/raw/main/figs/fig-colormap-lexical-4.png)
+![Countries' word embeddings](https://github.com/INGEOTEC/regional-spanish-models/raw/main/figs/fig-colormap-common-voc-semantic-4.png)
 
-![Geographic visualization of the semantic similarity, similar colors imply semantic similarity](https://github.com/INGEOTEC/regional-spanish-models/raw/main/figs/fig-colormap-lexical-4.png)
-
-# Regional word embeddings (semantic) and vocabularies (lexical)
+## Regional word embeddings (semantic) and vocabularies (lexical)
 
 Regional word embeddings for variations of the Spanish language. For the following UMAP 2D projections we selected a subset of more than 100K tokens that appear in at least 10 regions (see this [notebook](https://github.com/sadit/RegionalSpanish/blob/main/notebooks/common-vocabulary.ipynb) for more details.)
 
 <div style="display: inline-block; width: 32%; vertical-align: top;">
-<img src="https://raw.githubusercontent.com/sadit/regional-spanish-models/main/figs/fig-umap-common-voc-ALL.png" width="100%" alt="lexical" />
+<img src="https://github.com/INGEOTEC/regional-spanish-models/raw/main/figs/fig-umap-common-voc-1.7m.k%3D33.png" width="100%" alt="lexical" />
 All regions combined - Spanish language.
 </div>
 <div style="display: inline-block; width: 32%;">
-<img src="https://raw.githubusercontent.com/sadit/regional-spanish-models/main/figs/fig-umap-common-voc-AR.png" width="100%" alt="lexical" />
+<img src="https://github.com/INGEOTEC/regional-spanish-models/raw/main/figs/fig-umap-common-voc-tokens.cc%3DAR.k%3D33.png" width="100%" alt="lexical" />
 Argentinean variation of the Spanish language
 </div>
 <div style="display: inline-block; width: 32%; vertical-align: top;">
-<img src="https://raw.githubusercontent.com/sadit/regional-spanish-models/main/figs/fig-umap-common-voc-MX.png" width="100%" alt="lexical" />
+<img src="https://github.com/INGEOTEC/regional-spanish-models/raw/main/figs/fig-umap-common-voc-tokens.cc%3DMX.k%3D33.png" width="100%" alt="lexical" />
 Mexican variation of the Spanish language
 </div>
 
