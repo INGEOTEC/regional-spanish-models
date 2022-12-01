@@ -2,12 +2,12 @@
 
 This site shares the regionalized resources presented in the following manuscript:
 
-_Regionalized models for Spanish language variations based on Twitter._ Eric S. Tellez, Daniela Moctezuma, Sabino Miranda, and Mario Graff. https://arxiv.org/abs/2110.06128.
+_Regionalized models for Spanish language variations based on Twitter._ Eric S. Tellez, Daniela Moctezuma, Sabino Miranda, Mario Graff, and Guillermo Ruiz. https://arxiv.org/abs/2110.06128.
 
 ```
 @misc{tellez2021large,
       title={Regionalized models for Spanish language variations based on Twitter}, 
-      author={Eric S. Tellez and Daniela Moctezuma and Sabino Miranda and Mario Graff},
+      author={Eric S. Tellez and Daniela Moctezuma and Sabino Miranda and Mario Graff and Guillermo Ruiz},
       year={2021},
       eprint={2110.06128},
       archivePrefix={arXiv},
@@ -18,9 +18,22 @@ _Regionalized models for Spanish language variations based on Twitter._ Eric S. 
 # Semantic models
 We created word-embedding models with [fastText](https://fasttext.cc/), models are regionalized per country; we provide 4 different dimensionalities per region. We learned embeddings for several dimension and use default hyper-parameters. We provide two kinds of models, `bin` and `vec`, the prior is a binary model and the second an ascii version of the same model. The ascii version can be parsed and used without fastText and also are used by the same fastText to create supervised (clasification) models with pretrained word embeddings.
 
-| country            | code   | 300d |  32d | 16d  |   8d |
-|:----------         | ------ | ----:| ----:| ----:| ----:|
+| country            | code   | BILMA | FT 300d | FT 32d | FT 16d  | FT 8d |
+|:----------         | ------ | ----- | ----:| ----:| ----:| ----:|
 ```julia; echo = false; results = :raw;
+
+BILMA = Dict(
+      "AR" => ("bilma_small_AR_epoch-1.h5", "bilma_small_AR_epoch-1_classification_epochs-17.h5"),
+      "CL" => ("bilma_small_CL_epoch-3.h5", "bilma_small_CL_epoch-3_classification_epochs-9.h5"),
+      "CO" => ("bilma_small_CO_epoch-1.h5", "bilma_small_CO_epoch-1_classification_epochs-11.h5"),
+      "ES" => ("bilma_small_ES_epoch-1.h5", "bilma_small_ES_epoch-1_classification_epochs-9.h5"),
+      "MX" => ("bilma_small_MX_epoch-1.h5", "bilma_small_MX_epoch-1_classification_epochs-13.h5"),
+      "US" => ("bilma_small_US_epoch-3.h5", "bilma_small_US_epoch-3_classification_epochs-11.h5"),
+      "UY" => ("bilma_small_UY_epoch-3.h5", "bilma_small_UY_epoch-3_classification_epochs-13.h5"),
+      "VE" => ("bilma_small_VE_epoch-3.h5", "bilma_small_VE_epoch-3_classification_epochs-12.h5"),
+      "ALL" => ("bilma_small_ALL_epoch-1.h5", "bilma_small_ALL_epoch-1_classification_epochs-12.h5")
+)
+
 for k in [
       "Argentina (AR)",
       "Bolivia (BO)",
@@ -53,13 +66,18 @@ for k in [
       country, cc = split(k, '(')
       cc = strip(cc, ')')
       l = "http://geo.ingeotec.mx/~sadit/regional-spanish-models"
-      println("""| $country | $cc | [bin]($l/$cc.bin) [vec]($l/$cc.vec) | [bin]($l/$cc-32d.bin) [vec]($l/$cc-32d.vec) | [bin]($l/$cc-16d.bin) [vec]($l/$cc-16d.vec) | [bin]($l/$cc-8d.bin) [vec]($l/$cc-8d.vec) |""")
+      b = "http://geo.ingeotec.mx/~lgruiz/regional-models-bilma"
+      blink = haskey(BILMA, cc) ? "[model]($b/$(first(BILMA[cc])))" : "-"
+      println("""| $country | $cc | $blink | [bin]($l/$cc.bin) [vec]($l/$cc.vec) | [bin]($l/$cc-32d.bin) [vec]($l/$cc-32d.vec) | [bin]($l/$cc-16d.bin) [vec]($l/$cc-16d.vec) | [bin]($l/$cc-8d.bin) [vec]($l/$cc-8d.vec) |""")
 end
+
 
 ```
 Our _ALL_ model is learned from the entire corpora. 
 
-**Note:** There is previous version of the ALL word embedding with more than 2M tokens [ALL 2M](http://geo.ingeotec.mx/~sadit/regional-spanish-models/ALL-2M.bin)
+**Note 1:** There is previous version of the ALL word embedding with more than 2M tokens [ALL 2M](http://geo.ingeotec.mx/~sadit/regional-spanish-models/ALL-2M.bin)
+
+**Note 2:** All BILMA models use a common <a href="http://geo.ingeotec.mx/~lgruiz/regional-models-bilma/vocab_file_All.txt">vocabulary file</a>. More details and tutorials can be found in the [BILMA repository](https://github.com/msubrayada/bilma).
 
 
 ## Analysis of regional resources
@@ -95,17 +113,19 @@ Colors are also 3D UMAP projections, and therefore, color clusters are also mean
 
 Take a look of this [notebook](https://github.com/sadit/regional-spanish-models/blob/main/notebooks/explore-region-similarities.ipynb) to see some vertices of the graph used to generate the visualizations. Each word is a vertex of the graph that is also connected with other words. Note that definitions vary from region to region, for instance see the definition of _iglesia_ (church), where US spanish speakers define as evangeliques and other regions catholics. Another example comes from the _america_ token which referes to geographic terms in almost any region and football soocker teams for the MX region.
 
-All countries are projected in this [notebook](https://github.com/INGEOTEC/regional-spanish-models/blob/main/notebooks/visualize-voc-semantic-cloud.ipynb).
+You can find projections for all Spanish speaking countries in this [notebook](https://github.com/INGEOTEC/regional-spanish-models/blob/main/notebooks/visualize-voc-semantic-cloud.ipynb).
 
 # Lexical and semantic comparative between regions
 Affinity matrices of the Spanish language regional vocabularies using lexical (left) and semantic models (right.)
 <div style="display: inline-block; width: 49%; vertical-align: top;">
 <img src="https://github.com/INGEOTEC/regional-spanish-models/raw/main/figs/fig-lexical-affinity-matrix.png" width="100%" alt="lexical" />
-Lexical comparison (using inverse document frequencies as weights.) It uses the set of common words to reduce the distance values. You can see more details in this <a href="https://github.com/sadit/RegionalSpanish/blob/main/notebooks/visualize-common-voc-lexical.ipynb">notebook</a>.
+Lexical affinity matrix uses raw vocabularies as bag of words under the cosine distance (weights are empirical probability of the token occurring in each country in our Twitter corpus.)
+
+You can see more details in this <a href="https://github.com/sadit/RegionalSpanish/blob/main/notebooks/visualize-common-voc-lexical.ipynb">notebook</a>.
 </div>
 <div style="display: inline-block; width: 49%; vertical-align: top;">
 <img src="https://github.com/INGEOTEC/regional-spanish-models/raw/main/figs/fig-common-words-semantic-affinity-matrix.png" width="100%" alt="semantic" />
-Semantic comparison. It represents each region as the  <a href="https://en.wikipedia.org/wiki/Nearest_neighbor_graph">all-knn graph</a> using each regional word embeddings as input for the knn. We used k=33 and the cosine distance as weights. The procedure is detailed <a href="https://github.com/sadit/RegionalSpanish/blob/main/src/umap-embeddings-with-common-voc.jl">here</a>.
+Semantic comparison. It represents each region as the  <a href="https://en.wikipedia.org/wiki/Nearest_neighbor_graph">all-knn graph</a> using each regional word embeddings as input for the knn. We used k=33. The procedure is detailed <a href="https://github.com/sadit/RegionalSpanish/blob/main/src/umap-embeddings-with-common-voc.jl">here</a> and <a href="https://github.com/INGEOTEC/regional-spanish-models/blob/main/notebooks/visualize-common-voc-semantic.ipynb">this notebook</a>.
 </div>
 
 ## More resources:
