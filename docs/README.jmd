@@ -2,11 +2,11 @@
 
 This site shares the regionalized resources presented in the following manuscript:
 
-_A large scale lexical and semantic analysis of Spanish language variations in Twitter._ Eric S. Tellez, Daniela Moctezuma, Sabino Miranda, and Mario Graff. https://arxiv.org/abs/2110.06128.
+_Regionalized models for Spanish language variations based on Twitter._ Eric S. Tellez, Daniela Moctezuma, Sabino Miranda, and Mario Graff. https://arxiv.org/abs/2110.06128.
 
 ```
 @misc{tellez2021large,
-      title={A large scale lexical and semantic analysis of Spanish language variations in Twitter}, 
+      title={Regionalized models for Spanish language variations based on Twitter}, 
       author={Eric S. Tellez and Daniela Moctezuma and Sabino Miranda and Mario Graff},
       year={2021},
       eprint={2110.06128},
@@ -63,16 +63,16 @@ Our _ALL_ model is learned from the entire corpora.
 
 
 ## Analysis of regional resources
-Vocabulary similarity and geographical visualization, similar colors imply similarity.
-<div style="display: inline-block; width: 32%; vertical-align: top;">
 
-<img src="https://github.com/INGEOTEC/regional-spanish-models/raw/main/figs/fig-colormap-lexical-4.png" />
+<div style="display: inline-block; width: 32%; vertical-align: top;">
+<img src="https://github.com/INGEOTEC/regional-spanish-models/raw/main/figs/fig-colormap-lexical-4.png" width="100%" alt="lexical 2d projection" />
 Countries' vocabulary
-
 </div>
 <div style="display: inline-block; width: 32%; vertical-align: top;">
-<img src="https://github.com/INGEOTEC/regional-spanish-models/raw/main/figs/fig-colormap-common-voc-semantic-4.png" />
+<img src="https://github.com/INGEOTEC/regional-spanish-models/raw/main/figs/fig-colormap-common-voc-semantic-4.png" width="100%" alt="semantic 2d projection" />
 </div>
+
+Vocabulary and geographical similarity visualization, i.e., similar colors imply similarity.
 
 ## Regional word embeddings (semantic) and vocabularies (lexical)
 
@@ -95,37 +95,20 @@ Colors are also 3D UMAP projections, and therefore, color clusters are also mean
 
 Take a look on this [notebook](https://github.com/sadit/regional-spanish-models/blob/main/notebooks/explore-region-similarities.ipynb). Here you how definitions vary from region to region, for instance see the definition of _iglesia_ (church), where US spanish speakers define as evangeliques and other regions catholics. Another example comes from the _america_ token which referes to geographic terms in almost any region and football soocker teams for the MX region.
 
-
-# Regional emojis
-
 # Lexical and semantic comparative between regions
 Affinity matrices of the Spanish language regional vocabularies using lexical (left) and semantic models (right.)
 <div style="display: inline-block; width: 49%; vertical-align: top;">
-<img src="https://raw.githubusercontent.com/sadit/RegionalSpanish/main/figs/fig-common-words-lexical-affinity-matrix.png" width="100%" alt="lexical" />
+<img src="https://github.com/INGEOTEC/regional-spanish-models/raw/main/figs/fig-lexical-affinity-matrix.png" width="100%" alt="lexical" />
 Lexical comparison (using inverse document frequencies as weights.) It uses the set of common words to reduce the distance values. You can see more details in this <a href="https://github.com/sadit/RegionalSpanish/blob/main/notebooks/visualize-common-voc-lexical.ipynb">notebook</a>.
 </div>
 <div style="display: inline-block; width: 49%; vertical-align: top;">
-<img src="https://raw.githubusercontent.com/sadit/RegionalSpanish/main/figs/fig-common-words-semantic-affinity-matrix.png" width="100%" alt="semantic" />
+<img src="https://github.com/INGEOTEC/regional-spanish-models/raw/main/figs/fig-common-words-semantic-affinity-matrix.png" width="100%" alt="semantic" />
 Semantic comparison. It represents each region as the  <a href="https://en.wikipedia.org/wiki/Nearest_neighbor_graph">all-knn graph</a> using each regional word embeddings as input for the knn. We used k=33 and the cosine distance as weights. The procedure is detailed <a href="https://github.com/sadit/RegionalSpanish/blob/main/src/umap-embeddings-with-common-voc.jl">here</a>.
-</div>
-
-## 2D UMAP visualizations
-<div style="display: inline-block; width: 32%; vertical-align: top;">
-<img src="https://raw.githubusercontent.com/sadit/RegionalSpanish/main/figs/fig-voc-lexical-umap.png" width="100%" alt="lexical" />
-2D UMAP projection of regional vocabularies (cosine similarity)
-</div>
-<div style="display: inline-block; width: 32%; vertical-align: top;">
-<img src="https://raw.githubusercontent.com/sadit/RegionalSpanish/main/figs/fig-voc-semantic-umap.png" width="100%" alt="lexical" />
-2D UMAP projection of regional word embeddings (cosine similarity)
-</div>
-<div style="display: inline-block; width: 32%; vertical-align: top;">
-<img src="https://raw.githubusercontent.com/sadit/RegionalSpanish/main/figs/fig-emo-umap.png" width="100%" alt="emoji" />
-2D UMAP projection of regional emojis (cosine similarity)
 </div>
 
 ## More resources:
 <div>
-Please clone our <a href="https://github.com/sadit/RegionalSpanish">github repository</a>
+Please clone our <a href="https://github.com/INGEOTEC/regional-spanish-models">github repository</a>
 where you can find more metadata, resources, and code: regional vocabulary, regional embeddings, knn graphs of concepts (tokens), token comparison among regions, among others.
 </div>
 
