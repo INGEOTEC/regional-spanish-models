@@ -5,10 +5,10 @@ This site shares the regionalized resources presented in the following manuscrip
 _Regionalized models for Spanish language variations based on Twitter._ Eric S. Tellez, Daniela Moctezuma, Sabino Miranda, Mario Graff, and Guillermo Ruiz. https://arxiv.org/abs/2110.06128.
 
 ```
-@misc{tellez2021large,
+@misc{tellez2022regionalized,
       title={Regionalized models for Spanish language variations based on Twitter}, 
       author={Eric S. Tellez and Daniela Moctezuma and Sabino Miranda and Mario Graff and Guillermo Ruiz},
-      year={2021},
+      year={2022},
       eprint={2110.06128},
       archivePrefix={arXiv},
       primaryClass={cs.CL}
