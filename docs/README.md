@@ -167,3 +167,7 @@ We only consider Twitter as data source; messages with URLs were discarded, retw
 Please contact us if you want to know more about these resources:
 
 - Eric S. Tellez - `eric.tellez@infotec.mx`
+- Daniela Moctezuma
+- Sabino Miranda
+- Mario Graff
+- Guillermo Ruiz
