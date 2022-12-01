@@ -19,8 +19,8 @@ _Regionalized models for Spanish language variations based on Twitter._ Eric S. 
 We extracted vocabularies and created BERT language models and word-embedding models with [fastText](https://fasttext.cc/) for 26 countries having the Spanish language as one of their official or _de facto_ languages. We segmented our collection per country such that models could learn regionalisms.
 We created nine language models, called BILMA, for eight countries having enough data in our corpus to learn them. The ninth is a larger model using data from all 26 countries. Our BILMA models use the Keras framework; please visit the [BILMA repository](https://github.com/msubrayada/bilma) for more details and usage tutorials. In the case of fastText word embeddings, we learned four different dimensionalities per region using default hyper-parameters. We provide two kinds of models, `bin` and `vec`; the prior is a binary model, and the second is an ASCII version of the same model. The ASCII version can be parsed and used without fastText and also used by the same fastText to create supervised (classification) models with pretrained word embeddings.
 
-| country            | code   | Voc | BILMA | FT 300d | FT 32d | FT 16d  | FT 8d |
-|:----------         | ------ | --- | ----- | ----:| ----:| ----:| ----:|
+| country            | code   | sample | voc | BILMA | FT 300d | FT 32d | FT 16d  | FT 8d |
+|:----------         | ------ | ------ | --- | ----- | ----:| ----:| ----:| ----:|
 ```julia; echo = false; results = :raw;
 
 BILMA = Dict(
@@ -70,7 +70,9 @@ for k in [
       b = "http://geo.ingeotec.mx/~lgruiz/regional-models-bilma"
       blink = haskey(BILMA, cc) ? "[model]($b/$(first(BILMA[cc])))" : "-"
       vlink = "[voc](https://github.com/INGEOTEC/regional-spanish-models/raw/main/data/SpanishLang/voc/$cc.tsv.gz)"
-      println("""| $country | $cc | $vlink | $blink | [bin]($l/$cc.bin) [vec]($l/$cc.vec) | [bin]($l/$cc-32d.bin) [vec]($l/$cc-32d.vec) | [bin]($l/$cc-16d.bin) [vec]($l/$cc-16d.vec) | [bin]($l/$cc-8d.bin) [vec]($l/$cc-8d.vec) |""")
+      slink = (cc != "ALL") ? "[id](https://github.com/INGEOTEC/regional-spanish-models/raw/main/data/SpanishLang/messages/sample/sample-id-$cc.tsv.gz)" : "-"
+      
+      println("""| $country | $cc | $slink | $vlink | $blink | [bin]($l/$cc.bin) [vec]($l/$cc.vec) | [bin]($l/$cc-32d.bin) [vec]($l/$cc-32d.vec) | [bin]($l/$cc-16d.bin) [vec]($l/$cc-16d.vec) | [bin]($l/$cc-8d.bin) [vec]($l/$cc-8d.vec) |""")
 end
 
 ```
