@@ -106,12 +106,6 @@ You can see more details in this <a href="https://github.com/sadit/RegionalSpani
 Semantic comparison. It represents each region as the  <a href="https://en.wikipedia.org/wiki/Nearest_neighbor_graph">all-knn graph</a> using each regional word embeddings as input for the knn. We used k=33. The procedure is detailed <a href="https://github.com/sadit/RegionalSpanish/blob/main/src/umap-embeddings-with-common-voc.jl">here</a> and <a href="https://github.com/INGEOTEC/regional-spanish-models/blob/main/notebooks/visualize-common-voc-semantic.ipynb">this notebook</a>.
 </div>
 
-## More resources:
-<div>
-Please clone our <a href="https://github.com/INGEOTEC/regional-spanish-models">github repository</a>
-where you can find more metadata, resources, and code: regional vocabulary, regional embeddings, knn graphs of concepts (tokens), token comparison among regions, among others.
-</div>
-
 
 ## Corpora
 
@@ -161,6 +155,11 @@ We preprocessed messages as follows:
 
 We only consider Twitter as data source; messages with URLs were discarded, retweets and _fourth square_ and other automatic messages were removed. Short messages were also discarded. Please check our manuscript for more details [https://arxiv.org/abs/2110.06128](https://arxiv.org/abs/2110.06128) or contact us.
 
+# More resources
+<div>
+Clone our <a href="https://github.com/INGEOTEC/regional-spanish-models">github repository</a>
+where you can find more metadata, resources, and code: regional vocabulary, regional embeddings, knn graphs of concepts (tokens), token comparison among regions, among others.
+</div>
 
 # Contact us
 
