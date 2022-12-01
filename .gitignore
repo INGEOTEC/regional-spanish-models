@@ -1,2 +1,4 @@
 *.bin
 *.json.gz
+data/SpanishLang/embeddings/*.txt
+data/SpanishLang/voc/*.jld2

@@ -1,4 +1,3 @@
-
 # Regionalized word embeddings for the Spanish-language
 
 This site shares the regionalized resources presented in the following manuscript:
@@ -58,28 +57,28 @@ Our _ALL_ model is learned from the entire corpora.
 
 ## Analysis of regional resources
 
-![Geographic visualization of the semantic similarity, similar colors imply semantic similarity](fig-region-emo-colors-clustering-umap-3.png)
+![Geographic visualization of the semantic similarity, similar colors imply semantic similarity](https://github.com/INGEOTEC/regional-spanish-models/raw/main/figs/fig-colormap-lexical-4.png)
 
 # Regional word embeddings (semantic) and vocabularies (lexical)
 
 Regional word embeddings for variations of the Spanish language. For the following UMAP 2D projections we selected a subset of more than 100K tokens that appear in at least 10 regions (see this [notebook](https://github.com/sadit/RegionalSpanish/blob/main/notebooks/common-vocabulary.ipynb) for more details.)
 
 <div style="display: inline-block; width: 32%; vertical-align: top;">
-<img src="https://raw.githubusercontent.com/sadit/RegionalSpanish/main/figs/fig-umap-common-voc-ALL.png" width="100%" alt="lexical" />
+<img src="https://raw.githubusercontent.com/sadit/regional-spanish-models/main/figs/fig-umap-common-voc-ALL.png" width="100%" alt="lexical" />
 All regions combined - Spanish language.
 </div>
 <div style="display: inline-block; width: 32%;">
-<img src="https://raw.githubusercontent.com/sadit/RegionalSpanish/main/figs/fig-umap-common-voc-AR.png" width="100%" alt="lexical" />
+<img src="https://raw.githubusercontent.com/sadit/regional-spanish-models/main/figs/fig-umap-common-voc-AR.png" width="100%" alt="lexical" />
 Argentinean variation of the Spanish language
 </div>
 <div style="display: inline-block; width: 32%; vertical-align: top;">
-<img src="https://raw.githubusercontent.com/sadit/RegionalSpanish/main/figs/fig-umap-common-voc-MX.png" width="100%" alt="lexical" />
+<img src="https://raw.githubusercontent.com/sadit/regional-spanish-models/main/figs/fig-umap-common-voc-MX.png" width="100%" alt="lexical" />
 Mexican variation of the Spanish language
 </div>
 
 Colors are also 3D UMAP projections, and therefore, color clusters are also meaningful. Please note that UMAP projections are quite stable in terms of shapes. The different shapes indicate that different regions contain different definitions of their common tokens. Therefore, tasks having a strong influence of the regional meanings may take advantage of regional resources.
 
-Take a look on this [notebook](https://github.com/sadit/RegionalSpanish/blob/main/notebooks/explore-region-similarities.ipynb). Here you how definitions vary from region to region, for instance see the definition of _iglesia_ (church), where US spanish speakers define as evangeliques and other regions catholics. Another example comes from the _america_ token which referes to geographic terms in almost any region and football soocker teams for the MX region.
+Take a look on this [notebook](https://github.com/sadit/regional-spanish-models/blob/main/notebooks/explore-region-similarities.ipynb). Here you how definitions vary from region to region, for instance see the definition of _iglesia_ (church), where US spanish speakers define as evangeliques and other regions catholics. Another example comes from the _america_ token which referes to geographic terms in almost any region and football soocker teams for the MX region.
 
 
 # Regional emojis
