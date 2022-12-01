@@ -15,11 +15,12 @@ _Regionalized models for Spanish language variations based on Twitter._ Eric S. 
 }
 ```
 
-# Semantic models
-We created word-embedding models with [fastText](https://fasttext.cc/), models are regionalized per country; we provide 4 different dimensionalities per region. We learned embeddings for several dimension and use default hyper-parameters. We provide two kinds of models, `bin` and `vec`, the prior is a binary model and the second an ascii version of the same model. The ascii version can be parsed and used without fastText and also are used by the same fastText to create supervised (clasification) models with pretrained word embeddings.
+# Resources
+We created BERT language models and word-embedding models with [fastText](https://fasttext.cc/), all of these are regionalized per country. Our language models, called BILMA, we provide nine model files (8 countries and more having data from all 26 countries) that can be used with the keras framework. 
+Please visit the [BILMA repository](https://github.com/msubrayada/bilma) for more details and usage tutorials. In the case of fastText word embeddings, we learned 4 different dimensionalities per region, using default hyper-parameters. We provide two kinds of models, `bin` and `vec`, the prior is a binary model and the second an ascii version of the same model. The ascii version can be parsed and used without fastText and also are used by the same fastText to create supervised (clasification) models with pretrained word embeddings.
 
-| country            | code   | BILMA | FT 300d | FT 32d | FT 16d  | FT 8d |
-|:----------         | ------ | ----- | ----:| ----:| ----:| ----:|
+| country            | code   | Voc | BILMA | FT 300d | FT 32d | FT 16d  | FT 8d |
+|:----------         | ------ | --- | ----- | ----:| ----:| ----:| ----:|
 ```julia; echo = false; results = :raw;
 
 BILMA = Dict(
@@ -68,7 +69,8 @@ for k in [
       l = "http://geo.ingeotec.mx/~sadit/regional-spanish-models"
       b = "http://geo.ingeotec.mx/~lgruiz/regional-models-bilma"
       blink = haskey(BILMA, cc) ? "[model]($b/$(first(BILMA[cc])))" : "-"
-      println("""| $country | $cc | $blink | [bin]($l/$cc.bin) [vec]($l/$cc.vec) | [bin]($l/$cc-32d.bin) [vec]($l/$cc-32d.vec) | [bin]($l/$cc-16d.bin) [vec]($l/$cc-16d.vec) | [bin]($l/$cc-8d.bin) [vec]($l/$cc-8d.vec) |""")
+      vlink = "https://github.com/INGEOTEC/regional-spanish-models/raw/main/data/SpanishLang/voc/$cc.tsv.gz"
+      println("""| $country | $cc | $vlink | $blink | [bin]($l/$cc.bin) [vec]($l/$cc.vec) | [bin]($l/$cc-32d.bin) [vec]($l/$cc-32d.vec) | [bin]($l/$cc-16d.bin) [vec]($l/$cc-16d.vec) | [bin]($l/$cc-8d.bin) [vec]($l/$cc-8d.vec) |""")
 end
 
 
@@ -77,8 +79,9 @@ Our _ALL_ model is learned from the entire corpora.
 
 **Note 1:** There is previous version of the ALL word embedding with more than 2M tokens [ALL 2M](http://geo.ingeotec.mx/~sadit/regional-spanish-models/ALL-2M.bin)
 
-**Note 2:** All BILMA models use a common <a href="http://geo.ingeotec.mx/~lgruiz/regional-models-bilma/vocab_file_All.txt">vocabulary file</a>. More details and tutorials can be found in the [BILMA repository](https://github.com/msubrayada/bilma).
+**Note 2:** All BILMA models use a common <a href="http://geo.ingeotec.mx/~lgruiz/regional-models-bilma/vocab_file_All.txt">vocabulary file</a>. 
 
+**Note 3:** You may need to use _save as_ link instead of just click for downloading models.
 
 ## Analysis of regional resources
 
