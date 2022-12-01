@@ -64,8 +64,15 @@ Our _ALL_ model is learned from the entire corpora.
 
 ## Analysis of regional resources
 Vocabulary similarity and geographical visualization, similar colors imply similarity.
-![Countries' vocabulary](https://github.com/INGEOTEC/regional-spanish-models/raw/main/figs/fig-colormap-lexical-4.png)
-![Countries' word embeddings](https://github.com/INGEOTEC/regional-spanish-models/raw/main/figs/fig-colormap-common-voc-semantic-4.png)
+<div style="display: inline-block; width: 32%; vertical-align: top;">
+
+<img src="https://github.com/INGEOTEC/regional-spanish-models/raw/main/figs/fig-colormap-lexical-4.png" />
+Countries' vocabulary
+
+</div>
+<div style="display: inline-block; width: 32%; vertical-align: top;">
+<img src="https://github.com/INGEOTEC/regional-spanish-models/raw/main/figs/fig-colormap-common-voc-semantic-4.png" />
+</div>
 
 ## Regional word embeddings (semantic) and vocabularies (lexical)
 
