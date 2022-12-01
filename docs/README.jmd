@@ -71,7 +71,7 @@ for k in [
       blink = haskey(BILMA, cc) ? "[model]($b/$(first(BILMA[cc])))" : "-"
       vlink = "[voc](https://github.com/INGEOTEC/regional-spanish-models/raw/main/data/SpanishLang/voc/$cc.tsv.gz)"
       slink = (cc != "ALL") ? "[id](https://github.com/INGEOTEC/regional-spanish-models/raw/main/data/SpanishLang/messages/sample/sample-id-$cc.tsv.gz)" : "-"
-      
+
       println("""| $country | $cc | $slink | $vlink | $blink | [bin]($l/$cc.bin) [vec]($l/$cc.vec) | [bin]($l/$cc-32d.bin) [vec]($l/$cc-32d.vec) | [bin]($l/$cc-16d.bin) [vec]($l/$cc-16d.vec) | [bin]($l/$cc-8d.bin) [vec]($l/$cc-8d.vec) |""")
 end
 
@@ -192,3 +192,7 @@ We only consider Twitter as data source; messages with URLs were discarded, retw
 Please contact us if you want to know more about these resources:
 
 - Eric S. Tellez - `eric.tellez@infotec.mx`
+- Daniela Moctezuma
+- Sabino Miranda
+- Mario Graff
+- Guillermo Ruiz
