@@ -2,7 +2,7 @@
 
 This site shares the regionalized resources presented in the following manuscript:
 
-_Regionalized models for Spanish language variations based on Twitter._ Eric S. Tellez, Daniela Moctezuma, Sabino Miranda, Mario Graff, and Guillermo Ruiz. https://arxiv.org/abs/2110.06128.
+_Regionalized models for Spanish language variations based on Twitter._ Eric S. Tellez, Daniela Moctezuma, Sabino Miranda, Mario Graff, and Guillermo Ruiz. [https://arxiv.org/abs/2110.06128](https://arxiv.org/abs/2110.06128).
 
 ```
 @misc{tellez2022regionalized,
@@ -16,8 +16,8 @@ _Regionalized models for Spanish language variations based on Twitter._ Eric S. 
 ```
 
 # Resources
-We extracted vocabularies and created BERT language models and word-embedding models with [fastText](https://fasttext.cc/) for 26 countries having the Spanish language as one of their official or _de facto_ languages. We segmented our collection per country such that models can learn regionalisms.
-We created nine language models, called BILMA, for eight countries having data enough in our corpus to learn them. The nineth is an larger model using data from all 26 countries. Our BILMA models use the Keras framework; please visit the [BILMA repository](https://github.com/msubrayada/bilma) for more details and usage tutorials. In the case of fastText word embeddings, we learned 4 different dimensionalities per region, using default hyper-parameters. We provide two kinds of models, `bin` and `vec`, the prior is a binary model and the second an ascii version of the same model. The ascii version can be parsed and used without fastText and also are used by the same fastText to create supervised (clasification) models with pretrained word embeddings.
+We extracted vocabularies and created BERT language models and word-embedding models with [fastText](https://fasttext.cc/) for 26 countries having the Spanish language as one of their official or _de facto_ languages. We segmented our collection per country such that models could learn regionalisms.
+We created nine language models, called BILMA, for eight countries having enough data in our corpus to learn them. The ninth is a larger model using data from all 26 countries. Our BILMA models use the Keras framework; please visit the [BILMA repository](https://github.com/msubrayada/bilma) for more details and usage tutorials. In the case of fastText word embeddings, we learned four different dimensionalities per region using default hyper-parameters. We provide two kinds of models, `bin` and `vec`; the prior is a binary model, and the second is an ASCII version of the same model. The ASCII version can be parsed and used without fastText and also used by the same fastText to create supervised (classification) models with pretrained word embeddings.
 
 | country            | code   | Voc | BILMA | FT 300d | FT 32d | FT 16d  | FT 8d |
 |:----------         | ------ | --- | ----- | ----:| ----:| ----:| ----:|
@@ -76,11 +76,10 @@ end
 ```
 Our _ALL_ model is learned from the entire corpora. 
 
-**Note 1:** There is previous version of the ALL word embedding with more than 2M tokens [ALL 2M](http://geo.ingeotec.mx/~sadit/regional-spanish-models/ALL-2M.bin)
 
-**Note 2:** All BILMA models use a common <a href="http://geo.ingeotec.mx/~lgruiz/regional-models-bilma/vocab_file_All.txt">vocabulary file</a>. 
+**Note 1:** All BILMA models use a common <a href="http://geo.ingeotec.mx/~lgruiz/regional-models-bilma/vocab_file_All.txt">vocabulary file</a>. 
 
-**Note 3:** You may need to use _save as_ link instead of just click for downloading models.
+**Note 2:** You may need to use _save as_ link instead of just click for downloading models.
 
 ## Analysis of regional resources
 
@@ -111,11 +110,11 @@ Argentinean variation of the Spanish language
 Mexican variation of the Spanish language
 </div>
 
-Colors are also 3D UMAP projections, and therefore, color clusters are also meaningful. Please note that UMAP projections are quite stable in terms of local shapes but it can vary from a global perspective. The different shapes indicate that different regions contain different definitions of their common tokens. Therefore, tasks having a strong influence of the regional meanings may take advantage of regional resources.
+Colors are also 3D UMAP projections; therefore, color clusters are also meaningful. Please note that UMAP projections are pretty stable regarding local shapes, but they can vary from a global perspective. The different forms indicate that other regions have different definitions of common tokens. Therefore, tasks that strongly influence regional meanings may take advantage of regional resources.
 
-Take a look of this [notebook](https://github.com/sadit/regional-spanish-models/blob/main/notebooks/explore-region-similarities.ipynb) to see some vertices of the graph used to generate the visualizations. Each word is a vertex of the graph that is also connected with other words. Note that definitions vary from region to region, for instance see the definition of _iglesia_ (church), where US spanish speakers define as evangeliques and other regions catholics. Another example comes from the _america_ token which referes to geographic terms in almost any region and football soocker teams for the MX region.
+Look at this [notebook](https://github.com/sadit/regional-spanish-models/blob/main/notebooks/explore-region-similarities.ipynb) to see some vertices of the graph used to generate the visualizations. Each word is a vertex of the graph that is also connected with other words. Note that definitions vary from region to region. For instance, see the description of _iglesia_ (church), which US Spanish speakers define as Evangeliques and other regions Catholics. Another example comes from the _america_ token, which refers to geographic terms in almost any region and football soccer teams for the MX region.
 
-You can find projections for all Spanish speaking countries in this [notebook](https://github.com/INGEOTEC/regional-spanish-models/blob/main/notebooks/visualize-voc-semantic-cloud.ipynb).
+You can find projections for all Spanish-speaking countries in this [notebook](https://github.com/INGEOTEC/regional-spanish-models/blob/main/notebooks/visualize-voc-semantic-cloud.ipynb).
 
 # Lexical and semantic comparative between regions
 Affinity matrices of the Spanish language regional vocabularies using lexical (left) and semantic models (right.)
@@ -183,7 +182,7 @@ We preprocessed messages as follows:
 - laughs were normalized to four letters
 - words, punctuactions, and emojis are used as tokens
 
-We only consider Twitter as data source; messages with URLs were discarded, retweets and _fourth square_ and other automatic messages were removed. Short messages (less than 7 tokens) were also discarded.
+We only consider Twitter as data source; messages with URLs were discarded, retweets and _fourth square_ and other automatic messages were removed. Short messages were also discarded. Please check our manuscript for more details [https://arxiv.org/abs/2110.06128](https://arxiv.org/abs/2110.06128) or contact us.
 
 
 # Contact us
