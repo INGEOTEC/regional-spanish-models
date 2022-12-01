@@ -57,11 +57,11 @@ Our _ALL_ model is learned from the entire corpora.
 
 ## Analysis of regional resources
 
-<div style="display: inline-block; width: 32%; vertical-align: top;">
+<div style="display: inline-block; width: 49%; vertical-align: top;">
 <img src="https://github.com/INGEOTEC/regional-spanish-models/raw/main/figs/fig-colormap-lexical-4.png" width="100%" alt="lexical 2d projection" />
 Countries' vocabulary
 </div>
-<div style="display: inline-block; width: 32%; vertical-align: top;">
+<div style="display: inline-block; width: 49%; vertical-align: top;">
 <img src="https://github.com/INGEOTEC/regional-spanish-models/raw/main/figs/fig-colormap-common-voc-semantic-4.png" width="100%" alt="semantic 2d projection" />
 </div>
 
@@ -69,7 +69,7 @@ Vocabulary and geographical similarity visualization, i.e., similar colors imply
 
 ## Regional word embeddings (semantic) and vocabularies (lexical)
 
-Regional word embeddings for variations of the Spanish language. For the following UMAP 2D projections we selected a subset of more than 100K tokens that appear in at least 10 regions (see this [notebook](https://github.com/sadit/RegionalSpanish/blob/main/notebooks/common-vocabulary.ipynb) for more details.)
+Regional word embeddings for variations of the Spanish language. For the following UMAP 2D projections we selected a subset of more than 100K tokens that appear in at least five regions (see this [notebook](https://github.com/sadit/RegionalSpanish/blob/main/notebooks/common-vocabulary.ipynb) for more details.)
 
 <div style="display: inline-block; width: 32%; vertical-align: top;">
 <img src="https://github.com/INGEOTEC/regional-spanish-models/raw/main/figs/fig-umap-common-voc-1.7m.k%3D33.png" width="100%" alt="lexical" />
@@ -84,9 +84,11 @@ Argentinean variation of the Spanish language
 Mexican variation of the Spanish language
 </div>
 
-Colors are also 3D UMAP projections, and therefore, color clusters are also meaningful. Please note that UMAP projections are quite stable in terms of shapes. The different shapes indicate that different regions contain different definitions of their common tokens. Therefore, tasks having a strong influence of the regional meanings may take advantage of regional resources.
+Colors are also 3D UMAP projections, and therefore, color clusters are also meaningful. Please note that UMAP projections are quite stable in terms of local shapes but it can vary from a global perspective. The different shapes indicate that different regions contain different definitions of their common tokens. Therefore, tasks having a strong influence of the regional meanings may take advantage of regional resources.
 
-Take a look on this [notebook](https://github.com/sadit/regional-spanish-models/blob/main/notebooks/explore-region-similarities.ipynb). Here you how definitions vary from region to region, for instance see the definition of _iglesia_ (church), where US spanish speakers define as evangeliques and other regions catholics. Another example comes from the _america_ token which referes to geographic terms in almost any region and football soocker teams for the MX region.
+Take a look of this [notebook](https://github.com/sadit/regional-spanish-models/blob/main/notebooks/explore-region-similarities.ipynb) to see some vertices of the graph used to generate the visualizations. Each word is a vertex of the graph that is also connected with other words. Note that definitions vary from region to region, for instance see the definition of _iglesia_ (church), where US spanish speakers define as evangeliques and other regions catholics. Another example comes from the _america_ token which referes to geographic terms in almost any region and football soocker teams for the MX region.
+
+All countries are projected in this [notebook](https://github.com/INGEOTEC/regional-spanish-models/blob/main/notebooks/visualize-voc-semantic-cloud.ipynb).
 
 # Lexical and semantic comparative between regions
 Affinity matrices of the Spanish language regional vocabularies using lexical (left) and semantic models (right.)
@@ -150,7 +152,7 @@ We preprocessed messages as follows:
 - grouped hashtags, users and numbers
 - normalize symbol repetitions (max. 2 repeats)
 - laughs were normalized to four letters
-- words, punctuactions, and emojis are tokens
+- words, punctuactions, and emojis are used as tokens
 
 We only consider Twitter as data source; messages with URLs were discarded, retweets and _fourth square_ and other automatic messages were removed. Short messages (less than 7 tokens) were also discarded.
 
