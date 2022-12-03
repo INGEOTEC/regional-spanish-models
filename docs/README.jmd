@@ -19,11 +19,11 @@ Semantic comparison. It represents each region as the  <a href="https://en.wikip
 
 <div style="display: inline-block; width: 49%; vertical-align: top;">
 <img src="https://github.com/INGEOTEC/regional-spanish-models/raw/main/figs/fig-lexical-umap-4.png" width="100%" alt="lexical 2d projection" />
-From lexical affinity matrix
+From lexical affinity matrix. Take a look on this [notebook](https://github.com/INGEOTEC/regional-spanish-models/blob/main/notebooks/visualize-voc-lexical.ipynb) for more details.
 </div>
 <div style="display: inline-block; width: 49%; vertical-align: top;">
 <img src="https://github.com/INGEOTEC/regional-spanish-models/raw/main/figs/fig-voc-semantic-umap-4.png" width="100%" alt="semantic 2d projection" />
-From semantic-based affinity matrix
+From semantic-based affinity matrix. Take a look on this [notebook](https://github.com/INGEOTEC/regional-spanish-models/blob/main/notebooks/https://github.com/INGEOTEC/regional-spanish-models/blob/main/notebooks/visualize-common-voc-semantic.ipynb) for more details.
 </div>
 
 ### Geographic view
