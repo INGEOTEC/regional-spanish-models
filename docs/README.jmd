@@ -19,11 +19,11 @@ Semantic comparison. It represents each region as the  <a href="https://en.wikip
 
 <div style="display: inline-block; width: 49%; vertical-align: top;">
 <img src="https://github.com/INGEOTEC/regional-spanish-models/raw/main/figs/fig-lexical-umap-4.png" width="100%" alt="lexical 2d projection" />
-From lexical affinity matrix. Take a look on this <a href="https://github.com/INGEOTEC/regional-spanish-models/blob/main/notebooks/visualize-voc-lexical.ipynb">notebook</a> for more details and different $k$nn graphs.
+From lexical affinity matrix. Take a look on this <a href="https://github.com/INGEOTEC/regional-spanish-models/blob/main/notebooks/visualize-voc-lexical.ipynb">notebook</a> for more details and different $knn$ graphs.
 </div>
 <div style="display: inline-block; width: 49%; vertical-align: top;">
 <img src="https://github.com/INGEOTEC/regional-spanish-models/raw/main/figs/fig-voc-semantic-umap-4.png" width="100%" alt="semantic 2d projection" />
-From semantic-based affinity matrix. Take a look on this <a href="https://github.com/INGEOTEC/regional-spanish-models/blob/main/notebooks/https://github.com/INGEOTEC/regional-spanish-models/blob/main/notebooks/visualize-common-voc-semantic.ipynb">notebook</a> for more details and for more details and different $k$nn graphs.
+From semantic-based affinity matrix. Take a look on this <a href="https://github.com/INGEOTEC/regional-spanish-models/blob/main/notebooks/https://github.com/INGEOTEC/regional-spanish-models/blob/main/notebooks/visualize-common-voc-semantic.ipynb">notebook</a> for more details and for more details and different $knn$ graphs.
 </div>
 
 ### Geographic view
