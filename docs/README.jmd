@@ -1,19 +1,65 @@
-# Regionalized word embeddings for the Spanish-language
+# Regionalized resources for the Spanish-language
 
-This site shares the regionalized resources presented in the following manuscript:
 
-_Regionalized models for Spanish language variations based on Twitter._ Eric S. Tellez, Daniela Moctezuma, Sabino Miranda, Mario Graff, and Guillermo Ruiz. [https://arxiv.org/abs/2110.06128](https://arxiv.org/abs/2110.06128).
+## Lexical and semantic comparative between regions
+Affinity matrices of the Spanish language regional vocabularies using lexical (left) and semantic models (right.)
+<div style="display: inline-block; width: 49%; vertical-align: top;">
+<img src="https://github.com/INGEOTEC/regional-spanish-models/raw/main/figs/fig-lexical-affinity-matrix.png" width="100%" alt="lexical" />
+Lexical affinity matrix uses raw vocabularies as bag of words under the cosine distance (weights are empirical probability of the token occurring in each country in our Twitter corpus.)
 
-```
-@misc{tellez2022regionalized,
-      title={Regionalized models for Spanish language variations based on Twitter}, 
-      author={Eric S. Tellez and Daniela Moctezuma and Sabino Miranda and Mario Graff and Guillermo Ruiz},
-      year={2022},
-      eprint={2110.06128},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
-}
-```
+You can see more details in this <a href="https://github.com/sadit/RegionalSpanish/blob/main/notebooks/visualize-common-voc-lexical.ipynb">notebook</a>.
+</div>
+<div style="display: inline-block; width: 49%; vertical-align: top;">
+<img src="https://github.com/INGEOTEC/regional-spanish-models/raw/main/figs/fig-common-words-semantic-affinity-matrix.png" width="100%" alt="semantic" />
+Semantic comparison. It represents each region as the  <a href="https://en.wikipedia.org/wiki/Nearest_neighbor_graph">all-knn graph</a> using each regional word embeddings as input for the knn. We used k=33. The procedure is detailed <a href="https://github.com/sadit/RegionalSpanish/blob/main/src/umap-embeddings-with-common-voc.jl">here</a> and <a href="https://github.com/INGEOTEC/regional-spanish-models/blob/main/notebooks/visualize-common-voc-semantic.ipynb">this notebook</a>.
+</div>
+
+### Visualization of these affinity matrices
+2D UMAP projections (colors are computed using a 3D projections)
+
+<div style="display: inline-block; width: 49%; vertical-align: top;">
+<img src="https://github.com/INGEOTEC/regional-spanish-models/raw/main/figs/fig-lexical-umap-4.png" width="100%" alt="lexical 2d projection" />
+From lexical affinity matrix
+</div>
+<div style="display: inline-block; width: 49%; vertical-align: top;">
+<img src="https://github.com/INGEOTEC/regional-spanish-models/raw/main/figs/fig-voc-semantic-umap-4.png" width="100%" alt="semantic 2d projection" />
+From semantic-based affinity matrix
+</div>
+
+### Geographic view
+<div style="display: inline-block; width: 49%; vertical-align: top;">
+<img src="https://github.com/INGEOTEC/regional-spanish-models/raw/main/figs/fig-colormap-lexical-4.png" width="100%" alt="lexical 2d projection" />
+Countries' vocabulary
+</div>
+<div style="display: inline-block; width: 49%; vertical-align: top;">
+<img src="https://github.com/INGEOTEC/regional-spanish-models/raw/main/figs/fig-colormap-common-voc-semantic-4.png" width="100%" alt="semantic 2d projection" />
+</div>
+
+Vocabulary and geographical similarity visualization, i.e., similar colors imply similarity.
+
+## Regional word embeddings (semantic) and vocabularies (lexical)
+
+Regional word embeddings for variations of the Spanish language. For the following UMAP 2D projections we selected a subset of more than 100K tokens that appear in at least five regions (see this [notebook](https://github.com/sadit/RegionalSpanish/blob/main/notebooks/common-vocabulary.ipynb) for more details.)
+
+<div style="display: inline-block; width: 32%; vertical-align: top;">
+<img src="https://github.com/INGEOTEC/regional-spanish-models/raw/main/figs/fig-umap-common-voc-1.7m.k%3D33.png" width="100%" alt="lexical" />
+All regions combined - Spanish language.
+</div>
+<div style="display: inline-block; width: 32%;">
+<img src="https://github.com/INGEOTEC/regional-spanish-models/raw/main/figs/fig-umap-common-voc-tokens.cc%3DAR.k%3D33.png" width="100%" alt="lexical" />
+Argentinean variation of the Spanish language
+</div>
+<div style="display: inline-block; width: 32%; vertical-align: top;">
+<img src="https://github.com/INGEOTEC/regional-spanish-models/raw/main/figs/fig-umap-common-voc-tokens.cc%3DMX.k%3D33.png" width="100%" alt="lexical" />
+Mexican variation of the Spanish language
+</div>
+
+Colors are also 3D UMAP projections; therefore, color clusters are also meaningful. Please note that UMAP projections are pretty stable regarding local shapes, but they can vary from a global perspective. The different forms indicate that other regions have different definitions of common tokens. Therefore, tasks that strongly influence regional meanings may take advantage of regional resources.
+
+Look at this [notebook](https://github.com/sadit/regional-spanish-models/blob/main/notebooks/explore-region-similarities.ipynb) to see some vertices of the graph used to generate the visualizations. Each word is a vertex of the graph that is also connected with other words. Note that definitions vary from region to region. For instance, see the description of _iglesia_ (church), which US Spanish speakers define as Evangeliques and other regions Catholics. Another example comes from the _america_ token, which refers to geographic terms in almost any region and football soccer teams for the MX region.
+
+You can find projections for all Spanish-speaking countries in this [notebook](https://github.com/INGEOTEC/regional-spanish-models/blob/main/notebooks/visualize-voc-semantic-cloud.ipynb).
+
 
 # Resources
 We extracted vocabularies and created BERT language models and word-embedding models with [fastText](https://fasttext.cc/) for 26 countries having the Spanish language as one of their official or _de facto_ languages. We segmented our collection per country such that models could learn regionalisms.
@@ -83,67 +129,6 @@ Our _ALL_ model is learned from the entire corpora.
 
 **Note 2:** You may need to use _save as_ link instead of just click for downloading models.
 
-## Lexical and semantic comparative between regions
-Affinity matrices of the Spanish language regional vocabularies using lexical (left) and semantic models (right.)
-<div style="display: inline-block; width: 49%; vertical-align: top;">
-<img src="https://github.com/INGEOTEC/regional-spanish-models/raw/main/figs/fig-lexical-affinity-matrix.png" width="100%" alt="lexical" />
-Lexical affinity matrix uses raw vocabularies as bag of words under the cosine distance (weights are empirical probability of the token occurring in each country in our Twitter corpus.)
-
-You can see more details in this <a href="https://github.com/sadit/RegionalSpanish/blob/main/notebooks/visualize-common-voc-lexical.ipynb">notebook</a>.
-</div>
-<div style="display: inline-block; width: 49%; vertical-align: top;">
-<img src="https://github.com/INGEOTEC/regional-spanish-models/raw/main/figs/fig-common-words-semantic-affinity-matrix.png" width="100%" alt="semantic" />
-Semantic comparison. It represents each region as the  <a href="https://en.wikipedia.org/wiki/Nearest_neighbor_graph">all-knn graph</a> using each regional word embeddings as input for the knn. We used k=33. The procedure is detailed <a href="https://github.com/sadit/RegionalSpanish/blob/main/src/umap-embeddings-with-common-voc.jl">here</a> and <a href="https://github.com/INGEOTEC/regional-spanish-models/blob/main/notebooks/visualize-common-voc-semantic.ipynb">this notebook</a>.
-</div>
-
-### Visualization of these affinity matrices
-2D UMAP projections (colors are computed using a 3D projections)
-
-<div style="display: inline-block; width: 49%; vertical-align: top;">
-<img src="https://github.com/INGEOTEC/regional-spanish-models/raw/main/figs/fig-lexical-umap-4.png" width="100%" alt="lexical 2d projection" />
-From lexical affinity matrix
-</div>
-<div style="display: inline-block; width: 49%; vertical-align: top;">
-<img src="https://github.com/INGEOTEC/regional-spanish-models/raw/main/figs/fig-voc-semantic-umap-4.png" width="100%" alt="semantic 2d projection" />
-From semantic-based affinity matrix
-</div>
-
-### Geographic view
-<div style="display: inline-block; width: 49%; vertical-align: top;">
-<img src="https://github.com/INGEOTEC/regional-spanish-models/raw/main/figs/fig-colormap-lexical-4.png" width="100%" alt="lexical 2d projection" />
-Countries' vocabulary
-</div>
-<div style="display: inline-block; width: 49%; vertical-align: top;">
-<img src="https://github.com/INGEOTEC/regional-spanish-models/raw/main/figs/fig-colormap-common-voc-semantic-4.png" width="100%" alt="semantic 2d projection" />
-</div>
-
-Vocabulary and geographical similarity visualization, i.e., similar colors imply similarity.
-
-## Regional word embeddings (semantic) and vocabularies (lexical)
-
-Regional word embeddings for variations of the Spanish language. For the following UMAP 2D projections we selected a subset of more than 100K tokens that appear in at least five regions (see this [notebook](https://github.com/sadit/RegionalSpanish/blob/main/notebooks/common-vocabulary.ipynb) for more details.)
-
-<div style="display: inline-block; width: 32%; vertical-align: top;">
-<img src="https://github.com/INGEOTEC/regional-spanish-models/raw/main/figs/fig-umap-common-voc-1.7m.k%3D33.png" width="100%" alt="lexical" />
-All regions combined - Spanish language.
-</div>
-<div style="display: inline-block; width: 32%;">
-<img src="https://github.com/INGEOTEC/regional-spanish-models/raw/main/figs/fig-umap-common-voc-tokens.cc%3DAR.k%3D33.png" width="100%" alt="lexical" />
-Argentinean variation of the Spanish language
-</div>
-<div style="display: inline-block; width: 32%; vertical-align: top;">
-<img src="https://github.com/INGEOTEC/regional-spanish-models/raw/main/figs/fig-umap-common-voc-tokens.cc%3DMX.k%3D33.png" width="100%" alt="lexical" />
-Mexican variation of the Spanish language
-</div>
-
-Colors are also 3D UMAP projections; therefore, color clusters are also meaningful. Please note that UMAP projections are pretty stable regarding local shapes, but they can vary from a global perspective. The different forms indicate that other regions have different definitions of common tokens. Therefore, tasks that strongly influence regional meanings may take advantage of regional resources.
-
-Look at this [notebook](https://github.com/sadit/regional-spanish-models/blob/main/notebooks/explore-region-similarities.ipynb) to see some vertices of the graph used to generate the visualizations. Each word is a vertex of the graph that is also connected with other words. Note that definitions vary from region to region. For instance, see the description of _iglesia_ (church), which US Spanish speakers define as Evangeliques and other regions Catholics. Another example comes from the _america_ token, which refers to geographic terms in almost any region and football soccer teams for the MX region.
-
-You can find projections for all Spanish-speaking countries in this [notebook](https://github.com/INGEOTEC/regional-spanish-models/blob/main/notebooks/visualize-voc-semantic-cloud.ipynb).
-
-
-
 ## Corpora
 
 We collected Spanish tweets from 2016 to 2019 using the Twitter API (public stream) to create our manuscript and our resources. The final corpora is described below:
@@ -197,6 +182,23 @@ We only consider Twitter as data source; messages with URLs were discarded, retw
 Clone our <a href="https://github.com/INGEOTEC/regional-spanish-models">github repository</a>
 where you can find more metadata, resources, and code: regional vocabulary, regional embeddings, knn graphs of concepts (tokens), token comparison among regions, among others.
 </div>
+
+# Citing
+
+If you find useful the resources of this site, please cite us:
+
+_Regionalized models for Spanish language variations based on Twitter._ Eric S. Tellez, Daniela Moctezuma, Sabino Miranda, Mario Graff, and Guillermo Ruiz. [https://arxiv.org/abs/2110.06128](https://arxiv.org/abs/2110.06128).
+
+```
+@misc{tellez2022regionalized,
+      title={Regionalized models for Spanish language variations based on Twitter}, 
+      author={Eric S. Tellez and Daniela Moctezuma and Sabino Miranda and Mario Graff and Guillermo Ruiz},
+      year={2022},
+      eprint={2110.06128},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+```
 
 # Contact us
 
