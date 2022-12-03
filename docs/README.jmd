@@ -15,27 +15,28 @@ Semantic comparison. It represents each region as the  <a href="https://en.wikip
 </div>
 
 ### Visualization of these affinity matrices
-2D UMAP projections (colors are computed using a 3D projections)
+2D UMAP projections (colors are computed using a 3D projections). For these visualizations are based on $k$ nearest neighbor graphs ($k=3$) which capture local features of the affinity matrix.
 
 <div style="display: inline-block; width: 49%; vertical-align: top;">
 <img src="https://github.com/INGEOTEC/regional-spanish-models/raw/main/figs/fig-lexical-umap-4.png" width="100%" alt="lexical 2d projection" />
-From lexical affinity matrix. Take a look on this [notebook](https://github.com/INGEOTEC/regional-spanish-models/blob/main/notebooks/visualize-voc-lexical.ipynb) for more details.
+From lexical affinity matrix. Take a look on this <a href="https://github.com/INGEOTEC/regional-spanish-models/blob/main/notebooks/visualize-voc-lexical.ipynb">notebook</a> for more details and different $k$nn graphs.
 </div>
 <div style="display: inline-block; width: 49%; vertical-align: top;">
 <img src="https://github.com/INGEOTEC/regional-spanish-models/raw/main/figs/fig-voc-semantic-umap-4.png" width="100%" alt="semantic 2d projection" />
-From semantic-based affinity matrix. Take a look on this [notebook](https://github.com/INGEOTEC/regional-spanish-models/blob/main/notebooks/https://github.com/INGEOTEC/regional-spanish-models/blob/main/notebooks/visualize-common-voc-semantic.ipynb) for more details.
+From semantic-based affinity matrix. Take a look on this <a href="https://github.com/INGEOTEC/regional-spanish-models/blob/main/notebooks/https://github.com/INGEOTEC/regional-spanish-models/blob/main/notebooks/visualize-common-voc-semantic.ipynb">notebook</a> for more details and for more details and different $k$nn graphs.
 </div>
 
 ### Geographic view
 <div style="display: inline-block; width: 49%; vertical-align: top;">
 <img src="https://github.com/INGEOTEC/regional-spanish-models/raw/main/figs/fig-colormap-lexical-4.png" width="100%" alt="lexical 2d projection" />
-Countries' vocabulary
+Countries' vocabulary. 
 </div>
 <div style="display: inline-block; width: 49%; vertical-align: top;">
 <img src="https://github.com/INGEOTEC/regional-spanish-models/raw/main/figs/fig-colormap-common-voc-semantic-4.png" width="100%" alt="semantic 2d projection" />
 </div>
 
-Vocabulary and geographical similarity visualization, i.e., similar colors imply similarity.
+Vocabulary and geographical similarity visualization, i.e., similar colors imply similarity (computed from 3D UMAP projetions). 
+This [notebook](https://github.com/INGEOTEC/regional-spanish-models/blob/main/notebooks/map_RGB.ipynb) shows more maps for different configurations of UMAP.
 
 ## Regional word embeddings (semantic) and vocabularies (lexical)
 
