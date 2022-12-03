@@ -58,8 +58,32 @@ Our _ALL_ model is learned from the entire corpora.
 
 **Note 2:** You may need to use _save as_ link instead of just click for downloading models.
 
-## Analysis of regional resources
+## Lexical and semantic comparative between regions
+Affinity matrices of the Spanish language regional vocabularies using lexical (left) and semantic models (right.)
+<div style="display: inline-block; width: 49%; vertical-align: top;">
+<img src="https://github.com/INGEOTEC/regional-spanish-models/raw/main/figs/fig-lexical-affinity-matrix.png" width="100%" alt="lexical" />
+Lexical affinity matrix uses raw vocabularies as bag of words under the cosine distance (weights are empirical probability of the token occurring in each country in our Twitter corpus.)
 
+You can see more details in this <a href="https://github.com/sadit/RegionalSpanish/blob/main/notebooks/visualize-common-voc-lexical.ipynb">notebook</a>.
+</div>
+<div style="display: inline-block; width: 49%; vertical-align: top;">
+<img src="https://github.com/INGEOTEC/regional-spanish-models/raw/main/figs/fig-common-words-semantic-affinity-matrix.png" width="100%" alt="semantic" />
+Semantic comparison. It represents each region as the  <a href="https://en.wikipedia.org/wiki/Nearest_neighbor_graph">all-knn graph</a> using each regional word embeddings as input for the knn. We used k=33. The procedure is detailed <a href="https://github.com/sadit/RegionalSpanish/blob/main/src/umap-embeddings-with-common-voc.jl">here</a> and <a href="https://github.com/INGEOTEC/regional-spanish-models/blob/main/notebooks/visualize-common-voc-semantic.ipynb">this notebook</a>.
+</div>
+
+### Visualization of these affinity matrices
+2D UMAP projections (colors are computed using a 3D projections)
+
+<div style="display: inline-block; width: 49%; vertical-align: top;">
+<img src="https://github.com/INGEOTEC/regional-spanish-models/raw/main/figs/fig-lexical-umap-4.png" width="100%" alt="lexical 2d projection" />
+From lexical affinity matrix
+</div>
+<div style="display: inline-block; width: 49%; vertical-align: top;">
+<img src="https://github.com/INGEOTEC/regional-spanish-models/raw/main/figs/fig-voc-semantic-umap-4.png" width="100%" alt="semantic 2d projection" />
+From semantic-based affinity matrix
+</div>
+
+### Geographic view
 <div style="display: inline-block; width: 49%; vertical-align: top;">
 <img src="https://github.com/INGEOTEC/regional-spanish-models/raw/main/figs/fig-colormap-lexical-4.png" width="100%" alt="lexical 2d projection" />
 Countries' vocabulary
@@ -93,18 +117,6 @@ Look at this [notebook](https://github.com/sadit/regional-spanish-models/blob/ma
 
 You can find projections for all Spanish-speaking countries in this [notebook](https://github.com/INGEOTEC/regional-spanish-models/blob/main/notebooks/visualize-voc-semantic-cloud.ipynb).
 
-# Lexical and semantic comparative between regions
-Affinity matrices of the Spanish language regional vocabularies using lexical (left) and semantic models (right.)
-<div style="display: inline-block; width: 49%; vertical-align: top;">
-<img src="https://github.com/INGEOTEC/regional-spanish-models/raw/main/figs/fig-lexical-affinity-matrix.png" width="100%" alt="lexical" />
-Lexical affinity matrix uses raw vocabularies as bag of words under the cosine distance (weights are empirical probability of the token occurring in each country in our Twitter corpus.)
-
-You can see more details in this <a href="https://github.com/sadit/RegionalSpanish/blob/main/notebooks/visualize-common-voc-lexical.ipynb">notebook</a>.
-</div>
-<div style="display: inline-block; width: 49%; vertical-align: top;">
-<img src="https://github.com/INGEOTEC/regional-spanish-models/raw/main/figs/fig-common-words-semantic-affinity-matrix.png" width="100%" alt="semantic" />
-Semantic comparison. It represents each region as the  <a href="https://en.wikipedia.org/wiki/Nearest_neighbor_graph">all-knn graph</a> using each regional word embeddings as input for the knn. We used k=33. The procedure is detailed <a href="https://github.com/sadit/RegionalSpanish/blob/main/src/umap-embeddings-with-common-voc.jl">here</a> and <a href="https://github.com/INGEOTEC/regional-spanish-models/blob/main/notebooks/visualize-common-voc-semantic.ipynb">this notebook</a>.
-</div>
 
 
 ## Corpora
