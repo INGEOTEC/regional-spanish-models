@@ -161,7 +161,8 @@ where you can find more metadata, resources, and code: regional vocabulary, regi
 
 # Citing
 
-If you find useful the resources of this site, please cite us:
+If you find these resources useful, please give us a star in the github repository.
+Also, if you use them for research purposes, please consider to cite us:
 
 _Regionalized models for Spanish language variations based on Twitter._ Eric S. Tellez, Daniela Moctezuma, Sabino Miranda, Mario Graff, and Guillermo Ruiz. [https://arxiv.org/abs/2110.06128](https://arxiv.org/abs/2110.06128).
 
@@ -178,7 +179,7 @@ _Regionalized models for Spanish language variations based on Twitter._ Eric S. 
 
 # Contact us
 
-Please contact us if you want to know more about these resources:
+If you want to know more about these resources, or you need something not shared in this repo/site, please contact us.
 
 - Eric S. Tellez - `eric.tellez@infotec.mx`
 - Daniela Moctezuma
