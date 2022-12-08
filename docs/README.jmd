@@ -23,7 +23,7 @@ From lexical affinity matrix. Take a look on this <a href="https://github.com/IN
 </div>
 <div style="display: inline-block; width: 49%; vertical-align: top;">
 <img src="https://github.com/INGEOTEC/regional-spanish-models/raw/main/figs/fig-voc-semantic-umap-4.png" width="100%" alt="semantic 2d projection" />
-From semantic-based affinity matrix. Take a look on this <a href="https://github.com/INGEOTEC/regional-spanish-models/blob/main/notebooks/https://github.com/INGEOTEC/regional-spanish-models/blob/main/notebooks/visualize-common-voc-semantic.ipynb">notebook</a> for more details and for more details and different $knn$ graphs.
+From semantic-based affinity matrix. Take a look on this <a href="https://github.com/INGEOTEC/regional-spanish-models/blob/main/notebooks/visualize-common-voc-semantic.ipynb">notebook</a> for more details and for more details and different $knn$ graphs.
 </div>
 
 ### Geographic view
