@@ -101,7 +101,8 @@ We created nine language models, called BILMA, for eight countries having enough
 Our _ALL_ model is learned from the entire corpora. 
 
 
-OurBILMA models are also available in Huggingface <https://huggingface.co/guillermoruiz/bilma>
+OurBILMA models are also available in Huggingface <https://huggingface.co/guillermoruiz/bilma>.
+You can see how to work with BILMA to complete phrases and how to use it as embedding generators.
 
 **Note 1:** All BILMA models use a common <a href="http://geo.ingeotec.mx/~lgruiz/regional-models-bilma/vocab_file_All.txt">vocabulary file</a>. 
 
