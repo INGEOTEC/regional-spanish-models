@@ -113,8 +113,8 @@ for k in [
       ]
       country, cc = split(k, '(')
       cc = strip(cc, ')')
-      l = "http://geo.ingeotec.mx/~sadit/regional-spanish-models"
-      b = "http://geo.ingeotec.mx/~lgruiz/regional-models-bilma"
+      l = "http://189.254.229.114/~sadit/regional-spanish-models"
+      b = "http://189.254.229.114/~lgruiz/regional-models-bilma"
       blink = haskey(BILMA, cc) ? "[model]($b/$(first(BILMA[cc])))" : "-"
       vlink = "[voc](https://github.com/INGEOTEC/regional-spanish-models/raw/main/data/SpanishLang/voc/$cc.tsv.gz)"
       slink = (cc != "ALL") ? "[id](https://github.com/INGEOTEC/regional-spanish-models/raw/main/data/SpanishLang/messages/sample/sample-id-$cc.tsv.gz)" : "-"
@@ -126,7 +126,7 @@ end
 Our _ALL_ model is learned from the entire corpora. 
 
 
-**Note 1:** All BILMA models use a common <a href="http://geo.ingeotec.mx/~lgruiz/regional-models-bilma/vocab_file_All.txt">vocabulary file</a>. 
+**Note 1:** All BILMA models use a common <a href="http://189.254.229.114/~lgruiz/regional-models-bilma/vocab_file_All.txt">vocabulary file</a>. 
 
 **Note 2:** You may need to use _save as_ link instead of just click for downloading models.
 
